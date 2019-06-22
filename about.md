@@ -4,12 +4,12 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+I am a game developer come from china now.
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+<!-- A place to include any other types of information that you'd like to include about yourself. -->
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[yijiangfengyun@outlook.com](mailto:yijiangfengyun@outlook.com)
