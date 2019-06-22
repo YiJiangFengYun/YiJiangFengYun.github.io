@@ -1,7 +1,6 @@
 ---
 layout: page
 title: About
-permalink: /notes_typescript/
 ---
 
 I am a game developer come from china now.
