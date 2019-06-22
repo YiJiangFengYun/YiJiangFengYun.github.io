@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Notes of typescript
+description: Get enum variable name.
 ---
 
 You can get enum variable name.
