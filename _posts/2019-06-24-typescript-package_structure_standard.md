@@ -13,7 +13,7 @@ import * as packageName from "packagepath";
 console.log(packageName.variable1);
 
 //Call a function of the package.
-package.fun();
+packageName.fun();
 
 ```
 All packages should normally own its index file to do some common processes(for example,
