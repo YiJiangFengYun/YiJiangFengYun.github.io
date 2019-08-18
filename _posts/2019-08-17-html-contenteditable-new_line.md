@@ -1,6 +1,6 @@
 ---
 layout: post
-title: HTML -- Contenteditable.
+title: HTML -- Content editable breaking line.
 ---
 
 If a element that its content is editable is inline display or inline-block display, it use
