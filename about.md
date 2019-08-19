@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-I am a game developer come from china now.
+I am a game developer from China.
 
 ### More Information
 
