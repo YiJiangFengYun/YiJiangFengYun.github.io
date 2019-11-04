@@ -3,8 +3,9 @@ layout: post
 title: Typescript -- Exported variable should be constant.
 ---
 
+# [Updated 2019-11-04] This bug was fixed.
 
-# Exported variable should be constant.  
+# Exported variable should be constant.
 
 Because if it is not constant and try to change its value in its module file. The change will be invalid when typescript is converted to commonjs.
 
