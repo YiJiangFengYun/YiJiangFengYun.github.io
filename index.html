@@ -182,20 +182,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-count">13</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -233,7 +233,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/27/computing_algorithm-round_robin/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/27/nginx-config-cache_forever/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -246,7 +246,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2020/12/27/computing_algorithm-round_robin/" class="post-title-link" itemprop="url">Round-robin scheduling</a>
+          <a href="/2020/12/27/nginx-config-cache_forever/" class="post-title-link" itemprop="url">Nginx config for caching files forever</a>
         </h2>
 
         <div class="post-meta-container">
@@ -257,7 +257,80 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2020-12-27 11:51:29" itemprop="dateCreated datePublished" datetime="2020-12-27T11:51:29+00:00">2020-12-27</time>
+      <time title="Created: 2020-12-27 19:00:00" itemprop="dateCreated datePublished" datetime="2020-12-27T19:00:00+00:00">2020-12-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Nginx/" itemprop="url" rel="index"><span itemprop="name">Nginx</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>Use following config, nginx server don’t cache files with html extension and all files in the dynamic_1 and dynamic_2 folders, but it cache other files for one year at /srv/www.</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen 8001;</span><br><span class="line">    root /srv/www;</span><br><span class="line"></span><br><span class="line">    location ~* \.html$ &#123;</span><br><span class="line">      # Inherit default of parent, that is not cache control.</span><br><span class="line">      # For the html file.</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    location ~* \.*$ &#123;</span><br><span class="line">      location ~ /(dynamic_1|dynamic_2) &#123;</span><br><span class="line">        # Close expires for cache control, that is recover to default</span><br><span class="line">        # For the dynamic_1 and dynamic_2 subdirectories.</span><br><span class="line">        expires off;</span><br><span class="line">      &#125;</span><br><span class="line">      # Cache one year</span><br><span class="line">      # For other files.</span><br><span class="line">      expires 1y;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/26/computing_algorithm-round_robin/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="YiJiangFengYun">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2020/12/26/computing_algorithm-round_robin/" class="post-title-link" itemprop="url">Round-robin scheduling</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2020-12-26 12:00:00" itemprop="dateCreated datePublished" datetime="2020-12-26T12:00:00+00:00">2020-12-26</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -308,7 +381,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/27/game-development-subsetting-font/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/26/game-development-subsetting-font/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -321,7 +394,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2020/12/27/game-development-subsetting-font/" class="post-title-link" itemprop="url">Subsetting font</a>
+          <a href="/2020/12/26/game-development-subsetting-font/" class="post-title-link" itemprop="url">Subsetting font</a>
         </h2>
 
         <div class="post-meta-container">
@@ -332,7 +405,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2020-12-27 11:51:29" itemprop="dateCreated datePublished" datetime="2020-12-27T11:51:29+00:00">2020-12-27</time>
+      <time title="Created: 2020-12-26 12:00:00" itemprop="dateCreated datePublished" datetime="2020-12-26T12:00:00+00:00">2020-12-26</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -381,7 +454,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/27/gitlab-runner_on_windows_with_cocos/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/26/gitlab-runner_on_windows_with_cocos/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -394,7 +467,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2020/12/27/gitlab-runner_on_windows_with_cocos/" class="post-title-link" itemprop="url">Runner on Windows for building Cocos creator project.</a>
+          <a href="/2020/12/26/gitlab-runner_on_windows_with_cocos/" class="post-title-link" itemprop="url">Runner on Windows for building Cocos creator project.</a>
         </h2>
 
         <div class="post-meta-container">
@@ -405,7 +478,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2020-12-27 11:51:29" itemprop="dateCreated datePublished" datetime="2020-12-27T11:51:29+00:00">2020-12-27</time>
+      <time title="Created: 2020-12-26 12:00:00" itemprop="dateCreated datePublished" datetime="2020-12-26T12:00:00+00:00">2020-12-26</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -455,7 +528,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/27/html-contenteditable-new_line/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/26/html-contenteditable-new_line/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -468,7 +541,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2020/12/27/html-contenteditable-new_line/" class="post-title-link" itemprop="url">Content editable breaking line.</a>
+          <a href="/2020/12/26/html-contenteditable-new_line/" class="post-title-link" itemprop="url">Content editable breaking line.</a>
         </h2>
 
         <div class="post-meta-container">
@@ -479,7 +552,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2020-12-27 11:51:29" itemprop="dateCreated datePublished" datetime="2020-12-27T11:51:29+00:00">2020-12-27</time>
+      <time title="Created: 2020-12-26 12:00:00" itemprop="dateCreated datePublished" datetime="2020-12-26T12:00:00+00:00">2020-12-26</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -531,7 +604,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/27/http-verb_quality/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/26/http-verb_quality/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -544,7 +617,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2020/12/27/http-verb_quality/" class="post-title-link" itemprop="url">Verb Quality.</a>
+          <a href="/2020/12/26/http-verb_quality/" class="post-title-link" itemprop="url">Verb Quality.</a>
         </h2>
 
         <div class="post-meta-container">
@@ -555,7 +628,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2020-12-27 11:51:29" itemprop="dateCreated datePublished" datetime="2020-12-27T11:51:29+00:00">2020-12-27</time>
+      <time title="Created: 2020-12-26 12:00:00" itemprop="dateCreated datePublished" datetime="2020-12-26T12:00:00+00:00">2020-12-26</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -609,7 +682,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/27/javascript-two_major_module_system/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/26/javascript-two_major_module_system/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -622,7 +695,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2020/12/27/javascript-two_major_module_system/" class="post-title-link" itemprop="url">Two major module system.</a>
+          <a href="/2020/12/26/javascript-two_major_module_system/" class="post-title-link" itemprop="url">Two major module system.</a>
         </h2>
 
         <div class="post-meta-container">
@@ -633,7 +706,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2020-12-27 11:51:29" itemprop="dateCreated datePublished" datetime="2020-12-27T11:51:29+00:00">2020-12-27</time>
+      <time title="Created: 2020-12-26 12:00:00" itemprop="dateCreated datePublished" datetime="2020-12-26T12:00:00+00:00">2020-12-26</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -682,7 +755,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/27/network-netmask_table/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/26/network-netmask_table/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -695,7 +768,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2020/12/27/network-netmask_table/" class="post-title-link" itemprop="url">Netmask table</a>
+          <a href="/2020/12/26/network-netmask_table/" class="post-title-link" itemprop="url">Netmask table</a>
         </h2>
 
         <div class="post-meta-container">
@@ -706,7 +779,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2020-12-27 11:51:29" itemprop="dateCreated datePublished" datetime="2020-12-27T11:51:29+00:00">2020-12-27</time>
+      <time title="Created: 2020-12-26 12:00:00" itemprop="dateCreated datePublished" datetime="2020-12-26T12:00:00+00:00">2020-12-26</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -755,7 +828,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/27/network-tcp_vs_udp/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/26/network-tcp_vs_udp/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -768,7 +841,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2020/12/27/network-tcp_vs_udp/" class="post-title-link" itemprop="url">TCP vs UDP.</a>
+          <a href="/2020/12/26/network-tcp_vs_udp/" class="post-title-link" itemprop="url">TCP vs UDP.</a>
         </h2>
 
         <div class="post-meta-container">
@@ -779,7 +852,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2020-12-27 11:51:29" itemprop="dateCreated datePublished" datetime="2020-12-27T11:51:29+00:00">2020-12-27</time>
+      <time title="Created: 2020-12-26 12:00:00" itemprop="dateCreated datePublished" datetime="2020-12-26T12:00:00+00:00">2020-12-26</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -828,7 +901,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/27/nginx-config-cache_forever/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/26/typescript-combine_two_object/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -841,7 +914,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2020/12/27/nginx-config-cache_forever/" class="post-title-link" itemprop="url">Nginx config for caching files forever</a>
+          <a href="/2020/12/26/typescript-combine_two_object/" class="post-title-link" itemprop="url">Combining two object.</a>
         </h2>
 
         <div class="post-meta-container">
@@ -852,80 +925,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2020-12-27 11:51:29" itemprop="dateCreated datePublished" datetime="2020-12-27T11:51:29+00:00">2020-12-27</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Nginx/" itemprop="url" rel="index"><span itemprop="name">Nginx</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>Use following config, nginx server don’t cache files with html extension and all files in the dynamic_1 and dynamic_2 folders, but it cache other files for one year at /srv/www.</p>
-<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen 8001;</span><br><span class="line">    root /srv/www;</span><br><span class="line"></span><br><span class="line">    location ~* \.html$ &#123;</span><br><span class="line">      # Inherit default of parent, that is not cache control.</span><br><span class="line">      # For the html file.</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    location ~* \.*$ &#123;</span><br><span class="line">      location ~ /(dynamic_1|dynamic_2) &#123;</span><br><span class="line">        # Close expires for cache control, that is recover to default</span><br><span class="line">        # For the dynamic_1 and dynamic_2 subdirectories.</span><br><span class="line">        expires off;</span><br><span class="line">      &#125;</span><br><span class="line">      # Cache one year</span><br><span class="line">      # For other files.</span><br><span class="line">      expires 1y;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/27/typescript-combine_two_object/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="YiJiangFengYun">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2020/12/27/typescript-combine_two_object/" class="post-title-link" itemprop="url">Combining two object.</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2020-12-27 11:51:29" itemprop="dateCreated datePublished" datetime="2020-12-27T11:51:29+00:00">2020-12-27</time>
+      <time title="Created: 2020-12-26 12:00:00" itemprop="dateCreated datePublished" datetime="2020-12-26T12:00:00+00:00">2020-12-26</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
