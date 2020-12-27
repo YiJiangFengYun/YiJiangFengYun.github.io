@@ -1,5 +1,7 @@
 ---
 title: Subsetting font
+date: 2020-12-26 12:00:00
+updated: 2020-12-26 12:00:00
 categories:
 - Game Development
 tags:

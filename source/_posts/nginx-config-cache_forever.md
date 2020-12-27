@@ -1,5 +1,7 @@
 ---
 title: Nginx config for caching files forever
+date: 2020-12-27 19:00:00
+updated: 2020-12-27 19:00:00
 categories:
 - Nginx
 tags:
