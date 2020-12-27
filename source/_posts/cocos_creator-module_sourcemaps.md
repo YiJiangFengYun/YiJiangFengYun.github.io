@@ -1,5 +1,6 @@
 ---
 title: Cocos creator cann't use sourcemaps of modules.
+date: 2020-12-26 12:00:00
 categories:
 - Cocos Creator
 tags:
