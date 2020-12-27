@@ -9,7 +9,7 @@ tags:
 - Font
 ---
 
-## **Minify font seamlessly**
+Minify font seamlessly
 
 ### Install
 
