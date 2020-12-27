@@ -23,18 +23,23 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","version":"8.1.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
   </script>
-<meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://example.com/tags/index.html">
+<meta name="description" content="Gitlab runner runs on windows should use the system user.We should note its environment files include ssh files(“.ssh”) and cocos creator files(“.CocosCreator”)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Runner on Windows for building Cocos creator project.">
+<meta property="og:url" content="http://example.com/2020/12/27/gitlab-runner_on_windows_with_cocos/index.html">
 <meta property="og:site_name" content="Blog">
+<meta property="og:description" content="Gitlab runner runs on windows should use the system user.We should note its environment files include ssh files(“.ssh”) and cocos creator files(“.CocosCreator”)">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/images/home_folder_of_windows_system_user.png">
 <meta property="article:published_time" content="2020-12-27T10:35:06.959Z">
 <meta property="article:modified_time" content="2020-12-27T10:35:06.959Z">
 <meta property="article:author" content="YiJiangFengYun">
+<meta property="article:tag" content="Gitlab">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/home_folder_of_windows_system_user.png">
 
 
-<link rel="canonical" href="http://example.com/tags/">
+<link rel="canonical" href="http://example.com/2020/12/27/gitlab-runner_on_windows_with_cocos/">
 
 
 <script class="page-configurations">
@@ -42,12 +47,11 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
-<title>tags | Blog
-</title>
+<title>Runner on Windows for building Cocos creator project. | Blog</title>
   
 
 
@@ -226,43 +230,98 @@
 </noscript>
 
 
-    <div class="main-inner page posts-expand">
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
   
   
 
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/27/gitlab-runner_on_windows_with_cocos/">
 
-    
-    
-    
-    <div class="post-block" lang="en"><header class="post-header">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="YiJiangFengYun">
+      <meta itemprop="description" content="">
+    </span>
 
-<h1 class="post-title" itemprop="name headline">tags
-</h1>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Runner on Windows for building Cocos creator project.
+        </h1>
 
-<div class="post-meta-container">
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2020-12-27 10:35:06" itemprop="dateCreated datePublished" datetime="2020-12-27T10:35:06+00:00">2020-12-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Gitlab/" itemprop="url" rel="index"><span itemprop="name">Gitlab</span></a>
+        </span>
+    </span>
+
+  
 </div>
 
-</header>
+        </div>
+      </header>
 
-      
-      
-      <div class="post-body"><div class="tag-cloud">
-  <div class="tag-cloud-title">
-    12 tags in total
-  </div>
-  <div class="tag-cloud-tags">
-    <a href="/tags/Cocos-Creator/" style="font-size: 12px;" class="tag-cloud-0">Cocos Creator</a> <a href="/tags/Computing-Algorithm/" style="font-size: 12px;" class="tag-cloud-0">Computing Algorithm</a> <a href="/tags/Font/" style="font-size: 12px;" class="tag-cloud-0">Font</a> <a href="/tags/Game-Development/" style="font-size: 12px;" class="tag-cloud-0">Game Development</a> <a href="/tags/Gitlab/" style="font-size: 12px;" class="tag-cloud-0">Gitlab</a> <a href="/tags/HTML/" style="font-size: 21px;" class="tag-cloud-5">HTML</a> <a href="/tags/Javascript/" style="font-size: 12px;" class="tag-cloud-0">Javascript</a> <a href="/tags/Network/" style="font-size: 21px;" class="tag-cloud-5">Network</a> <a href="/tags/Nginx/" style="font-size: 12px;" class="tag-cloud-0">Nginx</a> <a href="/tags/Typescript/" style="font-size: 30px;" class="tag-cloud-10">Typescript</a> <a href="/tags/Virtual-Machine/" style="font-size: 12px;" class="tag-cloud-0">Virtual Machine</a> <a href="/tags/Web-Server/" style="font-size: 12px;" class="tag-cloud-0">Web Server</a>
-  </div>
-</div>
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>Gitlab runner runs on windows should use the system user.<br>We should note its environment files include ssh files(“.ssh”) and cocos creator files(“.CocosCreator”)</p>
+<p><img src="/images/home_folder_of_windows_system_user.png" alt="home_folder_of_windows_system_user"></p>
 
-      </div>
-      
-      
-      
     </div>
 
     
     
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Gitlab/" rel="tag"># Gitlab</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/12/27/html-contenteditable-new_line/" rel="prev" title="Content editable breaking line.">
+                  <i class="fa fa-chevron-left"></i> Content editable breaking line.
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2020/12/27/game-development-subsetting-font/" rel="next" title="Subsetting font">
+                  Subsetting font <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
 
 
 
