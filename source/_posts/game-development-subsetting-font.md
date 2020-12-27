@@ -1,7 +1,7 @@
 ---
 title: Subsetting font
 date: 2020-12-26 12:00:00
-updated: 2020-12-26 12:00:00
+updated: 2020-12-27 20:27:00
 categories:
 - Game Development
 tags:
@@ -9,15 +9,15 @@ tags:
 - Font
 ---
 
-### **Minify font seamlessly**
+## **Minify font seamlessly**
 
-## Install
+### Install
 
 ```sh
 npm install --save fontmin
 ```
 
-## Usage
+### Usage
 
 ```js
 const Fontmin = require('fontmin');
