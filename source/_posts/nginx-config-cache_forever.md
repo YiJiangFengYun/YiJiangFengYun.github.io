@@ -13,15 +13,15 @@ Use following config, nginx server don't cache files with html extension and all
 
 ```txt
 server {
-    listen 8001;
-    root /srv/www;
+    listen 8001; #The server listen on port 8001
+    root /srv/www; #The server source files is at /srv/www
 
     location ~* \.html$ {
       # Inherit default of parent, that is not cache control.
       # For the html file.
     }
 
-    location ~* \.*$ {
+    location ~* {
       location ~ /(dynamic_1|dynamic_2) {
         # Close expires for cache control, that is recover to default
         # For the dynamic_1 and dynamic_2 subdirectories.
@@ -29,6 +29,31 @@ server {
       }
       # Cache one year
       # For other files.
+      expires 1y;
+    }
+}
+```
+
+Or
+
+```txt
+server {
+    listen 8001; #The server listen on port 8001
+    root /srv/www; #The server source files is at /srv/www
+
+    location ~* \.html$ {
+      # Inherit default of parent, that is not cache control.
+      # For the html file.
+    }
+
+    location ~ /(dynamic_1|dynamic_2) {
+      # Inherit default of parent, that is not cache control.
+      # For the dynamic_1 and dynamic_2 subdirectories.
+    }
+
+    # Cache one year
+    # For other files.
+    location ~* {
       expires 1y;
     }
 }
