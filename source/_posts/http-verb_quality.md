@@ -3,9 +3,9 @@ title: Verb Quality.
 date: 2020-12-26 12:00:00
 updated: 2020-12-26 12:00:00
 categories:
-- HTML
+- HTTP
 tags:
-- HTML
+- HTTP
 ---
 
 ![table http verb quality](/images/table_http_verb_quality.png)
