@@ -1,7 +1,7 @@
 ---
 title: What curl user option do
 date: 2021-01-19 19:05:00
-date: 2021-01-19 19:05:00
+updated: 2021-01-19 19:05:00
 categories:
 - HTTP
 tags:
