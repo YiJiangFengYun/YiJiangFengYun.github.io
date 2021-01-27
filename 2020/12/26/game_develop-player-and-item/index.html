@@ -23,22 +23,22 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","version":"8.1.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
   </script>
-<meta name="description" content="Minify font seamlessly Install1npm install --save fontmin Usage123456789101112131415161718const Fontmin &#x3D; require(&amp;#x27;fontmin&amp;#x27;);var fontmin &#x3D; new Fontmin()    .src(&amp;#x27;.&#x2F;*.ttf&amp;#x27;) &#x2F;&#x2F;Source">
+<meta name="description" content="Item refers to countable thing of player.  The property num of Item is the quantity of Item.  The id of Item come from following:  Preset, constants in code or value in a config file. For example: mo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Subsetting font">
-<meta property="og:url" content="http://example.com/2020/12/26/game-development-subsetting-font/index.html">
+<meta property="og:title" content="Player and item.">
+<meta property="og:url" content="http://example.com/2020/12/26/game_develop-player-and-item/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="Minify font seamlessly Install1npm install --save fontmin Usage123456789101112131415161718const Fontmin &#x3D; require(&amp;#x27;fontmin&amp;#x27;);var fontmin &#x3D; new Fontmin()    .src(&amp;#x27;.&#x2F;*.ttf&amp;#x27;) &#x2F;&#x2F;Source">
+<meta property="og:description" content="Item refers to countable thing of player.  The property num of Item is the quantity of Item.  The id of Item come from following:  Preset, constants in code or value in a config file. For example: mo">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-12-26T12:00:00.000Z">
-<meta property="article:modified_time" content="2020-12-27T20:27:00.000Z">
+<meta property="article:modified_time" content="2020-12-26T12:00:00.000Z">
 <meta property="article:author" content="YiJiangFengYun">
 <meta property="article:tag" content="Game Development">
-<meta property="article:tag" content="Font">
+<meta property="article:tag" content="Entity Relationship">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/2020/12/26/game-development-subsetting-font/">
+<link rel="canonical" href="http://example.com/2020/12/26/game_develop-player-and-item/">
 
 
 <script class="page-configurations">
@@ -50,7 +50,7 @@
     lang   : 'en'
   };
 </script>
-<title>Subsetting font | Blog</title>
+<title>Player and item. | Blog</title>
   
 
 
@@ -162,7 +162,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -175,7 +175,6 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <section class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Install"><span class="nav-number">1.</span> <span class="nav-text">Install</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Usage"><span class="nav-number">2.</span> <span class="nav-text">Usage</span></a></li></ol></div>
         </section>
         <!--/noindex-->
 
@@ -241,7 +240,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/26/game-development-subsetting-font/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/26/game_develop-player-and-item/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -254,7 +253,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Subsetting font
+          Player and item.
         </h1>
 
         <div class="post-meta-container">
@@ -267,13 +266,6 @@
 
       <time title="Created: 2020-12-26 12:00:00" itemprop="dateCreated datePublished" datetime="2020-12-26T12:00:00+00:00">2020-12-26</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-12-27 20:27:00" itemprop="dateModified" datetime="2020-12-27T20:27:00+00:00">2020-12-27</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -294,9 +286,19 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>Minify font seamlessly</p>
-<h3 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save fontmin</span><br></pre></td></tr></table></figure>
-<h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Fontmin = <span class="built_in">require</span>(<span class="string">&#x27;fontmin&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> fontmin = <span class="keyword">new</span> Fontmin()</span><br><span class="line">    .src(<span class="string">&#x27;./*.ttf&#x27;</span>) <span class="comment">//Source ttf files</span></span><br><span class="line">    .use(Fontmin.glyph(&#123; </span><br><span class="line">        text: <span class="string">&#x27;012345678&#x27;</span>, <span class="comment">//Useful character set.</span></span><br><span class="line">        hinting: <span class="literal">false</span> <span class="comment">// keep ttf hint info (fpgm, prep, cvt). default = true</span></span><br><span class="line">    &#125;))</span><br><span class="line">    .dest(<span class="string">&#x27;output&#x27;</span>); <span class="comment">//output directory</span></span><br><span class="line"></span><br><span class="line">fontmin.run(<span class="function"><span class="keyword">function</span> (<span class="params">err, files</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (err) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">console</span>.error(err);</span><br><span class="line">    &#125;</span><br><span class="line">    files.forEach(<span class="function"><span class="params">file</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.info(<span class="string">`File: <span class="subst">$&#123;file.path&#125;</span>`</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+        <ul>
+<li><p>Item refers to countable thing of player.</p>
+</li>
+<li><p>The property num of Item is the quantity of Item.</p>
+</li>
+<li><p>The id of Item come from following:</p>
+<ol>
+<li>Preset, constants in code or value in a config file.<br> For example: money item should has a unique id created from code constant.  </li>
+<li>Runtime,<br> For example: item that every instance own different property values with each other has<br>   unique id created when creating a instance of item. The quantity of this item is one in<br>   general.</li>
+</ol>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">erDiagram</span><br><span class="line"> User ||--o&#123; Item : own</span><br><span class="line"> User &#123;</span><br><span class="line">     string id</span><br><span class="line">     string name</span><br><span class="line">     number level</span><br><span class="line"> &#125;</span><br><span class="line"> Item &#123;</span><br><span class="line">     string id</span><br><span class="line">     number num</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
     </div>
 
     
@@ -306,20 +308,20 @@
     <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/Game-Development/" rel="tag"># Game Development</a>
-              <a href="/tags/Font/" rel="tag"># Font</a>
+              <a href="/tags/Entity-Relationship/" rel="tag"># Entity Relationship</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2020/12/26/game_develop-player-and-item/" rel="prev" title="Player and item.">
-                  <i class="fa fa-chevron-left"></i> Player and item.
+                <a href="/2020/12/26/gitlab-runner_on_windows_with_cocos/" rel="prev" title="Runner on Windows for building Cocos creator project.">
+                  <i class="fa fa-chevron-left"></i> Runner on Windows for building Cocos creator project.
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2020/12/26/computing_algorithm-round_robin/" rel="next" title="Round-robin scheduling">
-                  Round-robin scheduling <i class="fa fa-chevron-right"></i>
+                <a href="/2020/12/26/game-development-subsetting-font/" rel="next" title="Subsetting font">
+                  Subsetting font <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
