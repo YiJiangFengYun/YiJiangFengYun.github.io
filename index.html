@@ -233,6 +233,88 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/01/28/game_development-example_user_items/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="YiJiangFengYun">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/01/28/game_development-example_user_items/" class="post-title-link" itemprop="url">Example for items of a game user.</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-01-28 09:00:00 / Modified: 10:00:00" itemprop="dateCreated datePublished" datetime="2021-01-28T09:00:00+00:00">2021-01-28</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Game-Development/" itemprop="url" rel="index"><span itemprop="name">Game Development</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="Basics"><a href="#Basics" class="headerlink" title="Basics"></a>Basics</h2><p>First, the game should has some basic types. I use typescript language to describe these types.<br>The game has a root item types: money, cloth and clothes.</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//ItemType is a top type of item.</span></span><br><span class="line"><span class="built_in">enum</span> ItemType &#123;</span><br><span class="line">    UNDEFINED,</span><br><span class="line">    MONEY,</span><br><span class="line">    CLOTH,</span><br><span class="line">    CLOTHES,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//Item is a base type of item</span></span><br><span class="line"><span class="keyword">interface</span> Item &#123;</span><br><span class="line">    id: <span class="built_in">string</span>, <span class="comment">//The property id of item should be unique to every item instances.</span></span><br><span class="line">    typeId: <span class="built_in">string</span>, <span class="comment">//The property typeId of item is string composed of all levels of the hierarchy of item type.</span></span><br><span class="line">    <span class="keyword">type</span>: ItemType, <span class="comment">// The property type of item indicate a item is money, cloth or clothes.</span></span><br><span class="line">    num: <span class="built_in">number</span>, <span class="comment">// The property num of item is a quantity of item.</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//User is type of user</span></span><br><span class="line"><span class="keyword">interface</span> User &#123;</span><br><span class="line">    id: <span class="built_in">string</span>, <span class="comment">// A user owns a unique id too.</span></span><br><span class="line">    name: <span class="built_in">string</span>, <span class="comment">// A user has a name.</span></span><br><span class="line">    items: Item[], <span class="comment">// This is a array of items user owns.</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//This constant is a user object</span></span><br><span class="line"><span class="keyword">const</span> user: User = &#123;</span><br><span class="line">    id: ...,</span><br><span class="line">    name: ...,</span><br><span class="line">    items: [],</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="Money"><a href="#Money" class="headerlink" title="Money"></a>Money</h3><p>Money is a single instance, so it can be created directly in code.</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> user: User = &#123;</span><br><span class="line"></span><br><span class="line">    ... </span><br><span class="line"></span><br><span class="line">    items: [ </span><br><span class="line">        &#123;</span><br><span class="line">            id: ...,</span><br><span class="line">            typeId: <span class="string">&quot;1&quot;</span>, <span class="comment">//Money has only one level type of 1.</span></span><br><span class="line">            <span class="keyword">type</span>: Item.MONEY,</span><br><span class="line">            num: ...,</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        ...</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Cloth"><a href="#Cloth" class="headerlink" title="Cloth"></a>Cloth</h3><p>There are many kind of cloth. Same kind of cloth has same properties and its value, so they can put into a single object.  </p>
+<p>Config:<br>type_id (auto generated) | item_type | cloth_type | name         |<br>—                      | —       | —        | —          |<br>“2-1”                    | 2         | 1          | White Cloth  |<br>“2-2”                    | 2         | 2          | Black Cloth  |<br>“2-3”                    | 2         | 3          | Red Cloth    |</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="built_in">enum</span> ClothType &#123;</span><br><span class="line">    UNDEFINED,</span><br><span class="line">    WHITE,</span><br><span class="line">    BLACK,</span><br><span class="line">    RED,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">interface</span> ClothItem <span class="keyword">extends</span> Item &#123;</span><br><span class="line">    clothType: ClothType, </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> user: User = &#123;</span><br><span class="line"></span><br><span class="line">    ... </span><br><span class="line"></span><br><span class="line">    items: [</span><br><span class="line"></span><br><span class="line">        ...</span><br><span class="line"></span><br><span class="line">        &#123;</span><br><span class="line">            id: ...,</span><br><span class="line">            typeId: <span class="string">&quot;2-1&quot;</span>, <span class="comment">//Cloth has two level of types, they connect with &quot;ItemType-ClothType&quot;.</span></span><br><span class="line">            <span class="keyword">type</span>: ItemType.Cloth,</span><br><span class="line">            clothType: ClothType.WHITE,</span><br><span class="line">            num: ...,</span><br><span class="line">        &#125;,</span><br><span class="line"></span><br><span class="line">        &#123;</span><br><span class="line">            id: ...,</span><br><span class="line">            typeId: <span class="string">&quot;2-2&quot;</span>, <span class="comment">//Cloth has two level of types, they connect with &quot;ItemType-ClothType&quot;.</span></span><br><span class="line">            <span class="keyword">type</span>: ItemType.Cloth,</span><br><span class="line">            clothType: ClothType.BLACK,</span><br><span class="line">            num: ...,</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        ...</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="Clothes"><a href="#Clothes" class="headerlink" title="Clothes"></a>Clothes</h3><p>There are many kind of clothes. Same properties of same kind of clothes can own different value, so every instance of clothes should be a object alone.  </p>
+<p>Config:<br>type_id (auto generated) | item_type | clothes_type | name         |<br>—                      | —       | —          | —            |<br>“3-1”                    | 3         | 1            | Pure White     |<br>“3-2”                    | 3         | 2            | Pinto          |</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="built_in">enum</span> ClothesType &#123;</span><br><span class="line">    UNDEFINED,</span><br><span class="line">    PURE_WHITE,</span><br><span class="line">    PINTO,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">interface</span> ClothesItem <span class="keyword">extends</span> Item &#123;</span><br><span class="line">    clothesType: ClothesType,</span><br><span class="line">    price: <span class="built_in">number</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> user: User = &#123;</span><br><span class="line"></span><br><span class="line">    ... </span><br><span class="line"></span><br><span class="line">    items: [</span><br><span class="line"></span><br><span class="line">        ...</span><br><span class="line"></span><br><span class="line">        &#123;</span><br><span class="line">            id: ...,</span><br><span class="line">            typeId: <span class="string">&quot;3-1&quot;</span>, <span class="comment">//Clothes has two level of types, they connect with &quot;ItemType-ClothesType&quot;.</span></span><br><span class="line">            <span class="keyword">type</span>: ItemType.Clothes,</span><br><span class="line">            clothesType: ClothesType.PURE_WHITE,</span><br><span class="line">            num: <span class="number">1</span>, <span class="comment">//Clothes num is always one.</span></span><br><span class="line">            price: ..., <span class="comment">//Different clothes has different price</span></span><br><span class="line">        &#125;,</span><br><span class="line"></span><br><span class="line">        &#123;</span><br><span class="line">            id: ...,</span><br><span class="line">            typeId: <span class="string">&quot;3-2&quot;</span>, <span class="comment">//Clothes has two level of types, they connect with &quot;ItemType-ClothesType&quot;.</span></span><br><span class="line">            <span class="keyword">type</span>: ItemType.Clothes,</span><br><span class="line">            clothesType: ClothesType.PINTO,</span><br><span class="line">            num: <span class="number">1</span>, <span class="comment">//Clothes num is always one.</span></span><br><span class="line">            price: ..., <span class="comment">//Different clothes has different price</span></span><br><span class="line">        &#125;,</span><br><span class="line"></span><br><span class="line">        ...</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/01/26/javascript-memory-management/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -876,87 +958,6 @@
 <p><img src="/images/round_robin.jpg" alt="Round robin"></p>
 <p>To schedule processes fairly, a round-robin scheduler generally employs time-sharing, giving each job a time slot or quantum (its allowance of CPU time), and interrupting the job if it is not completed by then. The job is resumed next time a time slot is assigned to that process. If the process terminates or changes its state to waiting during its attributed time quantum, the scheduler selects the first process in the ready queue to execute. In the absence of time-sharing, or if the quanta were large relative to the sizes of the jobs, a process that produced large jobs would be favoured over other processes.<br>Round-robin algorithm is a pre-emptive algorithm as the scheduler forces the process out of the CPU once the time quota expires.</p>
 
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/26/game-development-subsetting-font/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="YiJiangFengYun">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2020/12/26/game-development-subsetting-font/" class="post-title-link" itemprop="url">Subsetting font</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2020-12-26 12:00:00" itemprop="dateCreated datePublished" datetime="2020-12-26T12:00:00+00:00">2020-12-26</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-12-27 20:27:00" itemprop="dateModified" datetime="2020-12-27T20:27:00+00:00">2020-12-27</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Game-Development/" itemprop="url" rel="index"><span itemprop="name">Game Development</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>Minify font seamlessly</p>
-<h3 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save fontmin</span><br></pre></td></tr></table></figure>
-<h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Fontmin = <span class="built_in">require</span>(<span class="string">&#x27;fontmin&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> fontmin = <span class="keyword">new</span> Fontmin()</span><br><span class="line">    .src(<span class="string">&#x27;./*.ttf&#x27;</span>) <span class="comment">//Source ttf files</span></span><br><span class="line">    .use(Fontmin.glyph(&#123; </span><br><span class="line">        text: <span class="string">&#x27;012345678&#x27;</span>, <span class="comment">//Useful character set.</span></span><br><span class="line">        hinting: <span class="literal">false</span> <span class="comment">// keep ttf hint info (fpgm, prep, cvt). default = true</span></span><br><span class="line">    &#125;))</span><br><span class="line">    .dest(<span class="string">&#x27;output&#x27;</span>); <span class="comment">//output directory</span></span><br><span class="line"></span><br><span class="line">fontmin.run(<span class="function"><span class="keyword">function</span> (<span class="params">err, files</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (err) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">console</span>.error(err);</span><br><span class="line">    &#125;</span><br><span class="line">    files.forEach(<span class="function"><span class="params">file</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.info(<span class="string">`File: <span class="subst">$&#123;file.path&#125;</span>`</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
       
     </div>
 

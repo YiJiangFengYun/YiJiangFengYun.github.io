@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","version":"8.1.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
+  </script>
+<meta name="description" content="BasicsFirst, the game should has some basic types. I use typescript language to describe these types.The game has a root item types: money, cloth and clothes. 12345678910111213141516171819202122232425">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Example for items of a game user.">
+<meta property="og:url" content="http://example.com/2021/01/28/game_development-example_user_items/index.html">
+<meta property="og:site_name" content="Blog">
+<meta property="og:description" content="BasicsFirst, the game should has some basic types. I use typescript language to describe these types.The game has a root item types: money, cloth and clothes. 12345678910111213141516171819202122232425">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-01-28T09:00:00.000Z">
+<meta property="article:modified_time" content="2021-01-28T10:00:00.000Z">
+<meta property="article:author" content="YiJiangFengYun">
+<meta property="article:tag" content="Game Development">
+<meta property="article:tag" content="Entity Relationship">
+<meta property="article:tag" content="Typescript">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2021/01/28/game_development-example_user_items/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+<title>Example for items of a game user. | Blog</title>
+  
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <section class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Basics"><span class="nav-number">1.</span> <span class="nav-text">Basics</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Money"><span class="nav-number">1.1.</span> <span class="nav-text">Money</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cloth"><span class="nav-number">1.2.</span> <span class="nav-text">Cloth</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Clothes"><span class="nav-number">1.3.</span> <span class="nav-text">Clothes</span></a></li></ol></li></ol></div>
+        </section>
+        <!--/noindex-->
+
+        <section class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">YiJiangFengYun</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">21</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </section>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/01/28/game_development-example_user_items/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="YiJiangFengYun">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Example for items of a game user.
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-01-28 09:00:00 / Modified: 10:00:00" itemprop="dateCreated datePublished" datetime="2021-01-28T09:00:00+00:00">2021-01-28</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Game-Development/" itemprop="url" rel="index"><span itemprop="name">Game Development</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="Basics"><a href="#Basics" class="headerlink" title="Basics"></a>Basics</h2><p>First, the game should has some basic types. I use typescript language to describe these types.<br>The game has a root item types: money, cloth and clothes.</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//ItemType is a top type of item.</span></span><br><span class="line"><span class="built_in">enum</span> ItemType &#123;</span><br><span class="line">    UNDEFINED,</span><br><span class="line">    MONEY,</span><br><span class="line">    CLOTH,</span><br><span class="line">    CLOTHES,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//Item is a base type of item</span></span><br><span class="line"><span class="keyword">interface</span> Item &#123;</span><br><span class="line">    id: <span class="built_in">string</span>, <span class="comment">//The property id of item should be unique to every item instances.</span></span><br><span class="line">    typeId: <span class="built_in">string</span>, <span class="comment">//The property typeId of item is string composed of all levels of the hierarchy of item type.</span></span><br><span class="line">    <span class="keyword">type</span>: ItemType, <span class="comment">// The property type of item indicate a item is money, cloth or clothes.</span></span><br><span class="line">    num: <span class="built_in">number</span>, <span class="comment">// The property num of item is a quantity of item.</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//User is type of user</span></span><br><span class="line"><span class="keyword">interface</span> User &#123;</span><br><span class="line">    id: <span class="built_in">string</span>, <span class="comment">// A user owns a unique id too.</span></span><br><span class="line">    name: <span class="built_in">string</span>, <span class="comment">// A user has a name.</span></span><br><span class="line">    items: Item[], <span class="comment">// This is a array of items user owns.</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//This constant is a user object</span></span><br><span class="line"><span class="keyword">const</span> user: User = &#123;</span><br><span class="line">    id: ...,</span><br><span class="line">    name: ...,</span><br><span class="line">    items: [],</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="Money"><a href="#Money" class="headerlink" title="Money"></a>Money</h3><p>Money is a single instance, so it can be created directly in code.</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> user: User = &#123;</span><br><span class="line"></span><br><span class="line">    ... </span><br><span class="line"></span><br><span class="line">    items: [ </span><br><span class="line">        &#123;</span><br><span class="line">            id: ...,</span><br><span class="line">            typeId: <span class="string">&quot;1&quot;</span>, <span class="comment">//Money has only one level type of 1.</span></span><br><span class="line">            <span class="keyword">type</span>: Item.MONEY,</span><br><span class="line">            num: ...,</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        ...</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Cloth"><a href="#Cloth" class="headerlink" title="Cloth"></a>Cloth</h3><p>There are many kind of cloth. Same kind of cloth has same properties and its value, so they can put into a single object.  </p>
+<p>Config:<br>type_id (auto generated) | item_type | cloth_type | name         |<br>—                      | —       | —        | —          |<br>“2-1”                    | 2         | 1          | White Cloth  |<br>“2-2”                    | 2         | 2          | Black Cloth  |<br>“2-3”                    | 2         | 3          | Red Cloth    |</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="built_in">enum</span> ClothType &#123;</span><br><span class="line">    UNDEFINED,</span><br><span class="line">    WHITE,</span><br><span class="line">    BLACK,</span><br><span class="line">    RED,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">interface</span> ClothItem <span class="keyword">extends</span> Item &#123;</span><br><span class="line">    clothType: ClothType, </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> user: User = &#123;</span><br><span class="line"></span><br><span class="line">    ... </span><br><span class="line"></span><br><span class="line">    items: [</span><br><span class="line"></span><br><span class="line">        ...</span><br><span class="line"></span><br><span class="line">        &#123;</span><br><span class="line">            id: ...,</span><br><span class="line">            typeId: <span class="string">&quot;2-1&quot;</span>, <span class="comment">//Cloth has two level of types, they connect with &quot;ItemType-ClothType&quot;.</span></span><br><span class="line">            <span class="keyword">type</span>: ItemType.Cloth,</span><br><span class="line">            clothType: ClothType.WHITE,</span><br><span class="line">            num: ...,</span><br><span class="line">        &#125;,</span><br><span class="line"></span><br><span class="line">        &#123;</span><br><span class="line">            id: ...,</span><br><span class="line">            typeId: <span class="string">&quot;2-2&quot;</span>, <span class="comment">//Cloth has two level of types, they connect with &quot;ItemType-ClothType&quot;.</span></span><br><span class="line">            <span class="keyword">type</span>: ItemType.Cloth,</span><br><span class="line">            clothType: ClothType.BLACK,</span><br><span class="line">            num: ...,</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        ...</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="Clothes"><a href="#Clothes" class="headerlink" title="Clothes"></a>Clothes</h3><p>There are many kind of clothes. Same properties of same kind of clothes can own different value, so every instance of clothes should be a object alone.  </p>
+<p>Config:<br>type_id (auto generated) | item_type | clothes_type | name         |<br>—                      | —       | —          | —            |<br>“3-1”                    | 3         | 1            | Pure White     |<br>“3-2”                    | 3         | 2            | Pinto          |</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="built_in">enum</span> ClothesType &#123;</span><br><span class="line">    UNDEFINED,</span><br><span class="line">    PURE_WHITE,</span><br><span class="line">    PINTO,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">interface</span> ClothesItem <span class="keyword">extends</span> Item &#123;</span><br><span class="line">    clothesType: ClothesType,</span><br><span class="line">    price: <span class="built_in">number</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> user: User = &#123;</span><br><span class="line"></span><br><span class="line">    ... </span><br><span class="line"></span><br><span class="line">    items: [</span><br><span class="line"></span><br><span class="line">        ...</span><br><span class="line"></span><br><span class="line">        &#123;</span><br><span class="line">            id: ...,</span><br><span class="line">            typeId: <span class="string">&quot;3-1&quot;</span>, <span class="comment">//Clothes has two level of types, they connect with &quot;ItemType-ClothesType&quot;.</span></span><br><span class="line">            <span class="keyword">type</span>: ItemType.Clothes,</span><br><span class="line">            clothesType: ClothesType.PURE_WHITE,</span><br><span class="line">            num: <span class="number">1</span>, <span class="comment">//Clothes num is always one.</span></span><br><span class="line">            price: ..., <span class="comment">//Different clothes has different price</span></span><br><span class="line">        &#125;,</span><br><span class="line"></span><br><span class="line">        &#123;</span><br><span class="line">            id: ...,</span><br><span class="line">            typeId: <span class="string">&quot;3-2&quot;</span>, <span class="comment">//Clothes has two level of types, they connect with &quot;ItemType-ClothesType&quot;.</span></span><br><span class="line">            <span class="keyword">type</span>: ItemType.Clothes,</span><br><span class="line">            clothesType: ClothesType.PINTO,</span><br><span class="line">            num: <span class="number">1</span>, <span class="comment">//Clothes num is always one.</span></span><br><span class="line">            price: ..., <span class="comment">//Different clothes has different price</span></span><br><span class="line">        &#125;,</span><br><span class="line"></span><br><span class="line">        ...</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Game-Development/" rel="tag"># Game Development</a>
+              <a href="/tags/Entity-Relationship/" rel="tag"># Entity Relationship</a>
+              <a href="/tags/Typescript/" rel="tag"># Typescript</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/01/26/javascript-memory-management/" rel="prev" title="Memory management in V8 Engine">
+                  <i class="fa fa-chevron-left"></i> Memory management in V8 Engine
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">YiJiangFengYun</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+</body>
+</html>
