@@ -75,11 +75,12 @@ const user: User = {
 There are many kind of cloth. Same kind of cloth has same properties and its value, so they can put into a single object.  
 
 Config:
+
 | type_id (auto generated) | item_type | cloth_type | name         |
 | ---                      | ---       | ---        | ---          |
-| "2-1"                    | 2         | 1          | White Cloth  |
-| "2-2"                    | 2         | 2          | Black Cloth  |
-| "2-3"                    | 2         | 3          | Red Cloth    |
+| 2-1                      | 2         | 1          | White Cloth  |
+| 2-2                      | 2         | 2          | Black Cloth  |
+| 2-3                      | 2         | 3          | Red Cloth    |
 
 ```ts
 
@@ -129,10 +130,11 @@ const user: User = {
 There are many kind of clothes. Same properties of same kind of clothes can own different value, so every instance of clothes should be a object alone.  
 
 Config:
+
 | type_id (auto generated) | item_type | clothes_type | name         |
 | ---                      | ---       | ---          | ---            |
-| "3-1"                    | 3         | 1            | Pure White     |
-| "3-2"                    | 3         | 2            | Pinto          |
+| 3-1                      | 3         | 1            | Pure White     |
+| 3-2                      | 3         | 2            | Pinto          |
 
 ```ts
 
