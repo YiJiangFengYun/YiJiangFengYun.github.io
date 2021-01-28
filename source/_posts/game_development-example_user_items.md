@@ -76,11 +76,11 @@ There are many kind of cloth. Same kind of cloth has same properties and its val
 
 Config:
 
-| type_id (auto generated) | item_type | cloth_type | name         |
-| ---                      | ---       | ---        | ---          |
-| 2-1                      | 2         | 1          | White Cloth  |
-| 2-2                      | 2         | 2          | Black Cloth  |
-| 2-3                      | 2         | 3          | Red Cloth    |
+| type_id:string (auto generated) | item_type:int32 | cloth_type:int32 | name:string  |
+| ---                             | ---             | ---              | ---          |
+| 2-1                             | 2               | 1                | White Cloth  |
+| 2-2                             | 2               | 2                | Black Cloth  |
+| 2-3                             | 2               | 3                | Red Cloth    |
 
 ```ts
 
@@ -131,10 +131,10 @@ There are many kind of clothes. Same properties of same kind of clothes can own 
 
 Config:
 
-| type_id (auto generated) | item_type | clothes_type | name         |
-| ---                      | ---       | ---          | ---            |
-| 3-1                      | 3         | 1            | Pure White     |
-| 3-2                      | 3         | 2            | Pinto          |
+| type_id:string (auto generated) | item_type:int32 | clothes_type:int32 | name:string |
+| ---                             | ---             | ---                | ---         |
+| 3-1                             | 3               | 1                  | Pure White  |
+| 3-2                             | 3               | 2                  | Pinto       |
 
 ```ts
 
