@@ -131,10 +131,10 @@ There are many kind of clothes. Same properties of same kind of clothes can own 
 
 Config:
 
-| type_id:string (auto generated) | item_type:int32 | clothes_type:int32 | name:string |
-| ---                             | ---             | ---                | ---         |
-| 3-1                             | 3               | 1                  | Pure White  |
-| 3-2                             | 3               | 2                  | Pinto       |
+| type_id:string (auto generated) | item_type:int32 | clothes_type:int32 | name:string |durability:int32 (unit: day) |
+| ---                             | ---             | ---                | ---         | --- |
+| 3-1                             | 3               | 1                  | Pure White  |  2  |
+| 3-2                             | 3               | 2                  | Pinto       |  3  |
 
 ```ts
 
@@ -146,7 +146,7 @@ enum ClothesType {
 
 interface ClothesItem extends Item {
     clothesType: ClothesType,
-    price: number,
+    remainDay: number, //Remain time (uint: day)
 }
 
 const user: User = {
@@ -163,7 +163,7 @@ const user: User = {
             type: ItemType.Clothes,
             clothesType: ClothesType.PURE_WHITE,
             num: 1, //Clothes num is always one.
-            price: ..., //Different clothes has different price
+            remainDay: ..., //Different clothes has different ramain day
         },
 
         {
@@ -172,7 +172,7 @@ const user: User = {
             type: ItemType.Clothes,
             clothesType: ClothesType.PINTO,
             num: 1, //Clothes num is always one.
-            price: ..., //Different clothes has different price
+            remainDay: ..., //Different clothes has different ramain day
         },
 
         ...
