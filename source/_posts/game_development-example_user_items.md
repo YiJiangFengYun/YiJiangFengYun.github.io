@@ -1,7 +1,7 @@
 ---
 title: Example for items of a game user.
 date: 2021-01-28 09:00:00
-updated: 2021-01-28 11:45:00
+updated: 2021-01-28 12:07:00
 categories:
 - Game Development
 tags:
@@ -185,5 +185,4 @@ const user: User = {
 ## Final
 
 If manager want to award items to a user, he can fill a object data with special values of typeId and num properties.
-For example, giving a user 2 black cloth can be done through filling data object { typeId: "2-2", num: 2 }, rather than data
-object { type: 2, clothType: 2, num: 2 }.
+For example, giving a user 2 black cloth can be done through filling data object { typeId: "2-2", num: 2 }, rather than data object { type: 2, clothType: 2, num: 2 }.
