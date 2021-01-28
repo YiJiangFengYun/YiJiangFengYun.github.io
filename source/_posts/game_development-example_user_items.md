@@ -1,7 +1,7 @@
 ---
 title: Example for items of a game user.
 date: 2021-01-28 09:00:00
-updated: 2021-01-28 10:00:00
+updated: 2021-01-28 11:45:00
 categories:
 - Game Development
 tags:
@@ -13,7 +13,8 @@ tags:
 ## Basics
 
 First, the game should has some basic types. I use typescript language to describe these types.
-The game has a root item types: money, cloth and clothes.
+The game has a root item types: money, cloth and clothes. Money is used to buy cloth and clothes.
+Cloth is material of clothes. Clothes has durability and is worn by the user.
 
 ```ts
 //ItemType is a top type of item.
@@ -48,7 +49,7 @@ const user: User = {
 
 ```
 
-### Money
+## Money
 
 Money is a single instance, so it can be created directly in code.
 
@@ -70,7 +71,7 @@ const user: User = {
 }
 ```
 
-### Cloth
+## Cloth
 
 There are many kind of cloth. Same kind of cloth has same properties and its value, so they can put into a single object.  
 
@@ -125,16 +126,16 @@ const user: User = {
 
 ```
 
-### Clothes
+## Clothes
 
 There are many kind of clothes. Same properties of same kind of clothes can own different value, so every instance of clothes should be a object alone.  
 
 Config:
 
 | type_id:string (auto generated) | item_type:int32 | clothes_type:int32 | name:string |durability:int32 (unit: day) |
-| ---                             | ---             | ---                | ---         | --- |
-| 3-1                             | 3               | 1                  | Pure White  |  2  |
-| 3-2                             | 3               | 2                  | Pinto       |  3  |
+| ---                             | ---             | ---                | ---         | ---                         |
+| 3-1                             | 3               | 1                  | Pure White  |  2                          |
+| 3-2                             | 3               | 2                  | Pinto       |  3                          |
 
 ```ts
 
@@ -180,3 +181,9 @@ const user: User = {
 }
 
 ```
+
+## Final
+
+If manager want to award items to a user, he can fill a object data with special values of typeId and num properties.
+For example, giving a user 2 black cloth can be done through filling data object { typeId: "2-2", num: 2 }, rather than data
+object { type: 2, clothType: 2, num: 2 }.
