@@ -1,7 +1,7 @@
 ---
 title: Example for items of a game user.
 date: 2021-01-28 09:00:00
-updated: 2021-01-28 12:07:00
+updated: 2021-01-30 10:37:00
 categories:
 - Game Development
 tags:
@@ -33,7 +33,7 @@ interface Item {
     num: number, // The property num of item is a quantity of item.
 }
 
-//User is type of user
+//User is the type of user
 interface User {
     id: string, // A user owns a unique id too.
     name: string, // A user has a name.
@@ -184,5 +184,5 @@ const user: User = {
 
 ## Final
 
-If manager want to award items to a user, he can fill a object data with special values of typeId and num properties.
-For example, giving a user 2 black cloth can be done through filling data object { typeId: "2-2", num: 2 }, rather than data object { type: 2, clothType: 2, num: 2 }.
+If manager want to award items to a user, he can always fill a object data with special values of typeId and num properties.
+For example, awarding a user 2 black cloth can be done through filling data object { typeId: "2-2", num: 2 }, rather than data object { type: 2, clothType: 2, num: 2 }.
