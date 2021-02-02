@@ -19,14 +19,14 @@ function createFirstDomAudio() {
     enable = enable && cc.sys.os === cc.sys.OS_IOS && cc.sys.isBrowser;
     var audioFirst: HTMLAudioElement;
     if (necessary) {
-        const url = "https://huanghou.aiwan4399.com/0/sound_btn_first.mp3";
+        const url = "...";
         audioFirst = new Audio(url);
     }
 
     return {
         enable,
         audioFirst,
-    }
+    };
 }
 
 //Instance object.
