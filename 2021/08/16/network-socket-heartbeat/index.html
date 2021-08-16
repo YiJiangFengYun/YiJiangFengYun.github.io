@@ -31,7 +31,7 @@
 <meta property="og:description" content="Why do socket need heartbeatSometimes the link between the server and the client can be interrupted in a way that keeps both the server and the client unaware of the broken state of the connection For">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-08-16T19:30:00.000Z">
-<meta property="article:modified_time" content="2021-08-16T19:31:00.000Z">
+<meta property="article:modified_time" content="2021-08-16T19:46:00.000Z">
 <meta property="article:author" content="YiJiangFengYun">
 <meta property="article:tag" content="Network">
 <meta property="article:tag" content="Socket">
@@ -251,7 +251,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2021-08-16 19:30:00 / Modified: 19:31:00" itemprop="dateCreated datePublished" datetime="2021-08-16T19:30:00+00:00">2021-08-16</time>
+      <time title="Created: 2021-08-16 19:30:00 / Modified: 19:46:00" itemprop="dateCreated datePublished" datetime="2021-08-16T19:30:00+00:00">2021-08-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -278,7 +278,7 @@
     
     <div class="post-body" itemprop="articleBody">
         <h2 id="Why-do-socket-need-heartbeat"><a href="#Why-do-socket-need-heartbeat" class="headerlink" title="Why do socket need heartbeat"></a>Why do socket need heartbeat</h2><p>Sometimes the link between the server and the client can be interrupted in a way that keeps both the server and the client unaware of the broken state of the connection</p>
-<p>For example, If a socket client connnect to a socket server through a router, then the router network is interrupted, in this case the socket client and the socket server is unaware of the broken state of the connection.</p>
+<p>For example, If a socket client connnect to a socket server through a router, then the router network is interrupted. in this case the socket client and the socket server is unaware of the broken state of the connection. Two side sockets can send packets but the packets sended will never reach each other.</p>
 
     </div>
 
