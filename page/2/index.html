@@ -127,7 +127,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">24</span>
+          <span class="site-state-item-count">25</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -138,7 +138,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">22</span>
+        <span class="site-state-item-count">23</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -168,6 +168,79 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/27/typescript-map_object_types/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="YiJiangFengYun">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2020/12/27/typescript-map_object_types/" class="post-title-link" itemprop="url">Types of map object</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2020-12-27 20:05:00" itemprop="dateCreated datePublished" datetime="2020-12-27T20:05:00+00:00">2020-12-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Typescript/" itemprop="url" rel="index"><span itemprop="name">Typescript</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> keyToVal = &#123;</span><br><span class="line">    myKey1: <span class="string">&#x27;myValue1&#x27;</span>,</span><br><span class="line">    myKey2: <span class="string">&#x27;myValue2&#x27;</span>,</span><br><span class="line">&#125; <span class="keyword">as</span> <span class="keyword">const</span>; <span class="comment">// Type keyToVal is &#123; readonly myKey1: &quot;myValue1&quot;; readonly myKey2: &quot;myValue2&quot; &#125;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Keys = keyof <span class="keyword">typeof</span> keyToVal; <span class="comment">// &quot;myKey1&quot; | &quot;myKey2&quot;</span></span><br><span class="line"><span class="keyword">type</span> Values = <span class="keyword">typeof</span> keyToVal[Keys]; <span class="comment">//  &quot;myValue1&quot; | &quot;myValue2&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> map: &#123;[key: <span class="built_in">string</span>]: <span class="built_in">boolean</span> &#125; = &#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> TypeKey = keyof <span class="keyword">typeof</span> map; <span class="comment">//string | number</span></span><br><span class="line"><span class="keyword">type</span> TpyeValue = <span class="keyword">typeof</span> map[TypeKey]; <span class="comment">// boolean</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -834,79 +907,6 @@
     
     <div class="post-body" itemprop="articleBody">
           <p><img src="/images/netmask_table.png" alt="Netmask table"></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/26/network-tcp_vs_udp/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="YiJiangFengYun">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2020/12/26/network-tcp_vs_udp/" class="post-title-link" itemprop="url">TCP vs UDP.</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2020-12-26 12:00:00" itemprop="dateCreated datePublished" datetime="2020-12-26T12:00:00+00:00">2020-12-26</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Network/" itemprop="url" rel="index"><span itemprop="name">Network</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><img src="/images/tcp_vs_udp.png" alt="TCP vs UDP"></p>
 
       
     </div>
