@@ -1,7 +1,7 @@
 ---
 title: Use Cocos Creator with Socket.IO
 date: 2021-09-02 10:30:00
-updated: 2021-09-02 10:30:00
+updated: 2021-09-03 10:10:00
 categories:
 - Cocos Creator
 tags:
@@ -24,4 +24,19 @@ window.WebSocket = MyWebSocket;
 
 Now, Inner Socket.IO will use the class MyWebSocket to create a WebSocket instance.
 
-This code snippet should execute before importing Socket.IO module (For example, put the code snippet to main.js created after build the project for Android platform).  
+This code snippet should execute before importing Socket.IO module (For example, put the code snippet to main.js created after build the project for Android platform).
+
+For example, if a CA file is resources/ssl/cacert.pem, main.js should be as follow:
+
+```js
+//main.js
+class MyWebSocket extends WebSocket {
+    constructor(url, protocols) {
+        super(url, protocols, cc.url.raw("resources/ssl/cacert.pem"));
+    }
+}
+
+window.WebSocket = MyWebSocket;
+/// other code 
+///...
+```
