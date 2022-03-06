@@ -127,18 +127,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">27</span>
+          <span class="site-state-item-count">29</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-count">16</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">26</span>
+        <span class="site-state-item-count">27</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -168,6 +168,82 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/27/nodejs-best_image_compression_setting/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="YiJiangFengYun">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2020/12/27/nodejs-best_image_compression_setting/" class="post-title-link" itemprop="url">Best image compression settings using gulp-imagemin</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2020-12-27 20:17:00" itemprop="dateCreated datePublished" datetime="2020-12-27T20:17:00+00:00">2020-12-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Node-js/" itemprop="url" rel="index"><span itemprop="name">Node.js</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>Another duplicate document with more old information is at github dist.</p>
+<h2 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i gulp-cache gulp-imagemin imagemin-pngquant imagemin-zopfli imagemin-mozjpeg imagemin-giflossy</span><br></pre></td></tr></table></figure>
+
+<h2 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> cache = <span class="built_in">require</span>(<span class="string">&#x27;gulp-cache&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> imagemin = <span class="built_in">require</span>(<span class="string">&#x27;gulp-imagemin&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> imageminPngquant = <span class="built_in">require</span>(<span class="string">&#x27;imagemin-pngquant&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> imageminZopfli = <span class="built_in">require</span>(<span class="string">&#x27;imagemin-zopfli&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> imageminMozjpeg = <span class="built_in">require</span>(<span class="string">&#x27;imagemin-mozjpeg&#x27;</span>); <span class="comment">//need to run &#x27;brew install libpng&#x27;</span></span><br><span class="line"><span class="keyword">var</span> imageminGiflossy = <span class="built_in">require</span>(<span class="string">&#x27;imagemin-giflossy&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//compress all images</span></span><br><span class="line">gulp.task(<span class="string">&#x27;imagemin&#x27;</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> gulp.src([<span class="string">&#x27;app/**/*.&#123;gif,png,jpg&#125;&#x27;</span>])</span><br><span class="line">        .pipe(cache(imagemin([</span><br><span class="line">            <span class="comment">//png</span></span><br><span class="line">            imageminPngquant(&#123;</span><br><span class="line">                speed: <span class="number">1</span>,</span><br><span class="line">                quality: [<span class="number">0.95</span>, <span class="number">1</span>] <span class="comment">//lossy settings</span></span><br><span class="line">            &#125;),</span><br><span class="line">            imageminZopfli(&#123;</span><br><span class="line">                more: <span class="literal">true</span></span><br><span class="line">                <span class="comment">// iterations: 50 // very slow but more effective</span></span><br><span class="line">            &#125;),</span><br><span class="line">            <span class="comment">//gif</span></span><br><span class="line">            <span class="comment">// imagemin.gifsicle(&#123;</span></span><br><span class="line">            <span class="comment">//     interlaced: true,</span></span><br><span class="line">            <span class="comment">//     optimizationLevel: 3</span></span><br><span class="line">            <span class="comment">// &#125;),</span></span><br><span class="line">            <span class="comment">//gif very light lossy, use only one of gifsicle or Giflossy</span></span><br><span class="line">            imageminGiflossy(&#123;</span><br><span class="line">                optimizationLevel: <span class="number">3</span>,</span><br><span class="line">                optimize: <span class="number">3</span>, <span class="comment">//keep-empty: Preserve empty transparent frames</span></span><br><span class="line">                lossy: <span class="number">2</span></span><br><span class="line">            &#125;),</span><br><span class="line">            <span class="comment">//svg</span></span><br><span class="line">            imagemin.svgo(&#123;</span><br><span class="line">                plugins: [&#123;</span><br><span class="line">                    removeViewBox: <span class="literal">false</span></span><br><span class="line">                &#125;]</span><br><span class="line">            &#125;),</span><br><span class="line">            <span class="comment">//jpg lossless</span></span><br><span class="line">            imagemin.jpegtran(&#123;</span><br><span class="line">                progressive: <span class="literal">true</span></span><br><span class="line">            &#125;),</span><br><span class="line">            <span class="comment">//jpg very light lossy, use vs jpegtran</span></span><br><span class="line">            imageminMozjpeg(&#123;</span><br><span class="line">                quality: <span class="number">90</span></span><br><span class="line">            &#125;)</span><br><span class="line">        ])))</span><br><span class="line">        .pipe(gulp.dest(<span class="string">&#x27;dist&#x27;</span>));</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -838,79 +914,6 @@
 <li>An Idempotent operation is an operation that gives the same result no matter how many times you perform it. For example, the mathematical operation “multiply by zero” is idempotent because no matter how many times you multiply a number by zero, the result is always same.</li>
 </ol>
 <p>So, classifying methods as Safe and Idempotent makes it easier to understand which to use to develop features and predict results in a unreliable environment of Web where a client may fire a same request again</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/26/javascript-two_major_module_system/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="YiJiangFengYun">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2020/12/26/javascript-two_major_module_system/" class="post-title-link" itemprop="url">Two major module system.</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2020-12-26 12:00:00" itemprop="dateCreated datePublished" datetime="2020-12-26T12:00:00+00:00">2020-12-26</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Javascript/" itemprop="url" rel="index"><span itemprop="name">Javascript</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>Today there are two module systems that are actively being used. CommonJS (CJS) is what Node.js has used historically. ESM (EcmaScript modules) is a newer system which has been added to the JavaScript specification. Browsers already support ES modules, and Node is adding support.</p>
 
       
     </div>
