@@ -3,9 +3,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.0">
-
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.0.0-rc1">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
@@ -16,11 +14,12 @@
 
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","version":"8.7.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
-<meta property="og:type" content="website">
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.15.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta property="og:type" content="website">
 <meta property="og:title" content="Blog">
 <meta property="og:url" content="http://example.com/index.html">
 <meta property="og:site_name" content="Blog">
@@ -42,6 +41,10 @@
 
 
 
+
+
+
+
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
@@ -51,8 +54,8 @@
   <div class="headband"></div>
 
   <main class="main">
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="Toggle navigation bar" role="button">
         <span class="toggle-line"></span>
@@ -71,7 +74,7 @@
   </div>
 
   <div class="site-nav-right">
-    <div class="toggle popup-trigger">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
     </div>
   </div>
 </div>
@@ -79,26 +82,16 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu">
-        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li>
-        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
   </ul>
 </nav>
 
 
 
 
-</div>
+</header>
         
   
-  <div class="toggle sidebar-toggle" role="button">
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-  </div>
-
   <aside class="sidebar">
 
     <div class="sidebar-inner sidebar-overview-active">
@@ -118,12 +111,11 @@
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-overview">
-            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <p class="site-author-name" itemprop="name">YiJiangFengYun</p>
   <div class="site-description" itemprop="description"></div>
 </div>
-<div class="site-state-wrap site-overview-item animated">
+<div class="site-state-wrap animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
@@ -144,28 +136,15 @@
   </nav>
 </div>
 
-
-
-          </div>
         </div>
       </div>
     </div>
-  </aside>
-  <div class="sidebar-dimmer"></div>
-
-
-    </header>
 
     
-  <div class="back-to-top" role="button" aria-label="Back to top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
+  </aside>
 
-<noscript>
-  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
 
+    </div>
 
     <div class="main-inner index posts-expand">
 
@@ -182,11 +161,16 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="YiJiangFengYun">
-      <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Blog">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -223,7 +207,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="You-can-log-all-operations"><a href="#You-can-log-all-operations" class="headerlink" title="You can log all operations"></a>You can log all operations</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$ mongo</span><br><span class="line">MongoDB shell version: 2.4.9</span><br><span class="line">connecting to: <span class="built_in">test</span></span><br><span class="line">&gt; use myDb</span><br><span class="line">switched to db myDb</span><br><span class="line">&gt; db.getProfilingLevel()</span><br><span class="line">0</span><br><span class="line">&gt; db.setProfilingLevel(2)</span><br><span class="line">&#123; <span class="string">&quot;was&quot;</span> : 0, <span class="string">&quot;slowms&quot;</span> : 1, <span class="string">&quot;ok&quot;</span> : 1 &#125;</span><br><span class="line">&gt; db.getProfilingLevel()</span><br><span class="line">2</span><br><span class="line">&gt; db.system.profile.find( &#123; millis : &#123; <span class="variable">$gte</span>: 1 &#125;, appName : &#123; <span class="variable">$exists</span> : <span class="literal">false</span> &#125;, ns : &#123; <span class="variable">$not</span> : /system.profile/ &#125; &#125; ).sort( &#123; ts : -1 &#125; )</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+          <h2 id="You-can-log-all-operations"><a href="#You-can-log-all-operations" class="headerlink" title="You can log all operations"></a>You can log all operations</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$ mongo</span><br><span class="line">MongoDB shell version: 2.4.9</span><br><span class="line">connecting to: <span class="built_in">test</span></span><br><span class="line">&gt; use myDb</span><br><span class="line">switched to db myDb</span><br><span class="line">&gt; db.getProfilingLevel()</span><br><span class="line">0</span><br><span class="line">&gt; db.setProfilingLevel(2)</span><br><span class="line">&#123; <span class="string">&quot;was&quot;</span> : 0, <span class="string">&quot;slowms&quot;</span> : 1, <span class="string">&quot;ok&quot;</span> : 1 &#125;</span><br><span class="line">&gt; db.getProfilingLevel()</span><br><span class="line">2</span><br><span class="line">&gt; db.system.profile.find( &#123; millis : &#123; <span class="variable">$gte</span>: 1 &#125;, appName : &#123; <span class="variable">$exists</span> : <span class="literal">false</span> &#125;, ns : &#123; <span class="variable">$not</span> : /system.profile/ &#125; &#125; ).<span class="built_in">sort</span>( &#123; ts : -1 &#125; )</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p><a target="_blank" rel="noopener" href="http://docs.mongodb.org/manual/reference/method/db.setProfilingLevel/">Source: http://docs.mongodb.org/manual/reference/method/db.setProfilingLevel/</a><br>db.setProfilingLevel(2) means “log all operations”.</p>
 <h2 id="How-to-drop-the-collection-system-profile"><a href="#How-to-drop-the-collection-system-profile" class="headerlink" title="How to drop the collection system.profile"></a>How to drop the collection system.profile</h2><ul>
 <li>Firstly, turn off the profiling by setting its level to 0.</li>
@@ -238,7 +222,7 @@
 <ul>
 <li>Now you are free to go and start it all over.</li>
 </ul>
-<h2 id="How-to-list-operations-meets-the-criteria"><a href="#How-to-list-operations-meets-the-criteria" class="headerlink" title="How to list operations meets the criteria"></a>How to list operations meets the criteria</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//查询指令记录。</span></span><br><span class="line"><span class="comment">//过滤条件：1.需耗时（millis字段)多少毫秒以上，2.appName字段不存在（可能指令来自某APP，如Studio 3T), 3.ns字符串中不包含system.profile（排除指令是system.profile相关的）。</span></span><br><span class="line"><span class="comment">//排序：按时间排序。</span></span><br><span class="line">db.system.profile.find( &#123; <span class="attr">millis</span> : &#123; <span class="attr">$gte</span>: <span class="number">1</span> &#125;, <span class="attr">appName</span> : &#123; <span class="attr">$exists</span> : <span class="literal">false</span> &#125;, <span class="attr">ns</span> : &#123; <span class="attr">$not</span> : <span class="regexp">/system.profile/</span> &#125; &#125; ).sort( &#123; <span class="attr">ts</span> : -<span class="number">1</span> &#125; )</span><br></pre></td></tr></table></figure>
+<h2 id="How-to-list-operations-meets-the-criteria"><a href="#How-to-list-operations-meets-the-criteria" class="headerlink" title="How to list operations meets the criteria"></a>How to list operations meets the criteria</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//查询指令记录。</span></span><br><span class="line"><span class="comment">//过滤条件：1.需耗时（millis字段)多少毫秒以上，2.appName字段不存在（可能指令来自某APP，如Studio 3T), 3.ns字符串中不包含system.profile（排除指令是system.profile相关的）。</span></span><br><span class="line"><span class="comment">//排序：按时间排序。</span></span><br><span class="line">db.<span class="property">system</span>.<span class="property">profile</span>.<span class="title function_">find</span>( &#123; millis : &#123; <span class="attr">$gte</span>: <span class="number">1</span> &#125;, appName : &#123; $exists : <span class="literal">false</span> &#125;, ns : &#123; $not : <span class="regexp">/system.profile/</span> &#125; &#125; ).<span class="title function_">sort</span>( &#123; ts : -<span class="number">1</span> &#125; )</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -270,11 +254,16 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="YiJiangFengYun">
-      <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Blog">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -348,11 +337,16 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="YiJiangFengYun">
-      <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Blog">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -422,11 +416,16 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="YiJiangFengYun">
-      <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Blog">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -463,7 +462,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p> toString() 和 valueOf()<br>    1 + ‘1’ //‘11’ 整型 1 被转换成字符串 ‘1’，变成了 ‘1’ + ‘1’ = ‘11’<br>    2 * ‘3’ // 6  ：字符串 ‘3’ 被转换成整型 3 ，变成了 2 * 3 = 6<br>    ————–javascript————————————–<br>    let o = function () {<br>        this.toString = () =&gt; {<br>            return ‘my is o,’<br>        }<br>        this.valueOf = () =&gt; {<br>            return 99<br>        }<br>    }<br>    let n = new o()<br>    console.log(n + ‘abc’) // ‘99abc’<br>    console.log(n * 10) // 990<br>    o + ‘1’ //“function o() {\n    this.toString = () =&gt; {\n        return ‘my is o,’\n    }\n    \n    this.valueOf = () =&gt; {\n        return 99\n    }\n}”<br>    ————————————————————-<br>    加法计算，如果项A不是原始类型，如果valueOf方法存在，则会调用valueOf方法得到B，如果得到的结果B不是原始类型或者valueOf方法不存在，则如果A的<br>    toString方法存在，则调用toString方法，最后如果这个项还不是原始类型，则报错Uncaught TypeError: Cannot convert object to primitive value。<br>    乘法也是一样的<br>    ————–javascript—————————————<br>    let O = function () {<br>        this.toString = () =&gt; {<br>            console.log(‘into toString’)<br>            return { ‘string’: ‘ssss’ }<br>        }<br>        this.valueOf = () =&gt; {<br>            console.log(‘into valueOf’)<br>            return { ‘val’: 99 }<br>        }<br>    }<br>    let o = new O()<br>    console.log(O + ‘xx’)<br>    //into valueOf<br>    //into toString<br>    // VM1904:12 Uncaught TypeError: Cannot convert object to primitive value<br>    —————————————————————</p>
+          <p> toString() 和 valueOf()<br>    1 + ‘1’ &#x2F;&#x2F;‘11’ 整型 1 被转换成字符串 ‘1’，变成了 ‘1’ + ‘1’ &#x3D; ‘11’<br>    2 * ‘3’ &#x2F;&#x2F; 6  ：字符串 ‘3’ 被转换成整型 3 ，变成了 2 * 3 &#x3D; 6<br>    ————–javascript————————————–<br>    let o &#x3D; function () {<br>        this.toString &#x3D; () &#x3D;&gt; {<br>            return ‘my is o,’<br>        }<br>        this.valueOf &#x3D; () &#x3D;&gt; {<br>            return 99<br>        }<br>    }<br>    let n &#x3D; new o()<br>    console.log(n + ‘abc’) &#x2F;&#x2F; ‘99abc’<br>    console.log(n * 10) &#x2F;&#x2F; 990<br>    o + ‘1’ &#x2F;&#x2F;“function o() {\n    this.toString &#x3D; () &#x3D;&gt; {\n        return ‘my is o,’\n    }\n    \n    this.valueOf &#x3D; () &#x3D;&gt; {\n        return 99\n    }\n}”<br>    ————————————————————-<br>    加法计算，如果项A不是原始类型，如果valueOf方法存在，则会调用valueOf方法得到B，如果得到的结果B不是原始类型或者valueOf方法不存在，则如果A的<br>    toString方法存在，则调用toString方法，最后如果这个项还不是原始类型，则报错Uncaught TypeError: Cannot convert object to primitive value。<br>    乘法也是一样的<br>    ————–javascript—————————————<br>    let O &#x3D; function () {<br>        this.toString &#x3D; () &#x3D;&gt; {<br>            console.log(‘into toString’)<br>            return { ‘string’: ‘ssss’ }<br>        }<br>        this.valueOf &#x3D; () &#x3D;&gt; {<br>            console.log(‘into valueOf’)<br>            return { ‘val’: 99 }<br>        }<br>    }<br>    let o &#x3D; new O()<br>    console.log(O + ‘xx’)<br>    &#x2F;&#x2F;into valueOf<br>    &#x2F;&#x2F;into toString<br>    &#x2F;&#x2F; VM1904:12 Uncaught TypeError: Cannot convert object to primitive value<br>    —————————————————————</p>
 
       
     </div>
@@ -495,11 +494,16 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="YiJiangFengYun">
-      <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Blog">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -536,7 +540,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a href="/pages/sight-and-light">Sight And Light (How to create 2D visibility/shadow effects for your game)</a></p>
+          <p><a href="/pages/sight-and-light">Sight And Light (How to create 2D visibility&#x2F;shadow effects for your game)</a></p>
 <p>This post is from <a target="_blank" rel="noopener" href="https://ncase.me/sight-and-light/">https://ncase.me/sight-and-light/</a></p>
 
       
@@ -569,11 +573,16 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="YiJiangFengYun">
-      <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Blog">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -590,13 +599,13 @@
 
       <time title="Created: 2021-09-02 10:30:00" itemprop="dateCreated datePublished" datetime="2021-09-02T10:30:00+00:00">2021-09-02</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-09-03 10:10:00" itemprop="dateModified" datetime="2021-09-03T10:10:00+00:00">2021-09-03</time>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
       </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2021-09-03 10:10:00" itemprop="dateModified" datetime="2021-09-03T10:10:00+00:00">2021-09-03</time>
+    </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -618,12 +627,12 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>When use Cocos Creator with Socket.IO on Android platform, It may need to pass the path of a CA file to WebSocket constructor to create a new WebSocket instance. How to do this? We can use Class Extends and put operation of passing the path of the CA file to the constructor of sub class of WebSocket as follow:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyWebSocket</span> <span class="keyword">extends</span> <span class="title">WebSocket</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="title">constructor</span>(<span class="params">url, protocols</span>)</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&quot;This is MyWebSocket.&quot;</span>);</span><br><span class="line">        <span class="built_in">super</span>(url, protocols, pathCAFile);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">window</span>.WebSocket = MyWebSocket;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MyWebSocket</span> <span class="keyword">extends</span> <span class="title class_ inherited__">WebSocket</span> &#123;</span><br><span class="line">    <span class="title function_">constructor</span>(<span class="params">url, protocols</span>) &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;This is MyWebSocket.&quot;</span>);</span><br><span class="line">        <span class="variable language_">super</span>(url, protocols, pathCAFile);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">window</span>.<span class="property">WebSocket</span> = <span class="title class_">MyWebSocket</span>;</span><br></pre></td></tr></table></figure>
 
 <p>Now, Inner Socket.IO will use the class MyWebSocket to create a WebSocket instance.</p>
 <p>This code snippet should execute before importing Socket.IO module (For example, put the code snippet to main.js created after build the project for Android platform).</p>
-<p>For example, if a CA file is resources/ssl/cacert.pem, main.js should be as follow:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//main.js</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyWebSocket</span> <span class="keyword">extends</span> <span class="title">WebSocket</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="title">constructor</span>(<span class="params">url, protocols</span>)</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>(url, protocols, cc.url.raw(<span class="string">&quot;resources/ssl/cacert.pem&quot;</span>));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">window</span>.WebSocket = MyWebSocket;</span><br><span class="line"><span class="comment">/// other code </span></span><br><span class="line"><span class="comment">///...</span></span><br></pre></td></tr></table></figure>
+<p>For example, if a CA file is resources&#x2F;ssl&#x2F;cacert.pem, main.js should be as follow:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//main.js</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyWebSocket</span> <span class="keyword">extends</span> <span class="title class_ inherited__">WebSocket</span> &#123;</span><br><span class="line">    <span class="title function_">constructor</span>(<span class="params">url, protocols</span>) &#123;</span><br><span class="line">        <span class="variable language_">super</span>(url, protocols, cc.<span class="property">url</span>.<span class="title function_">raw</span>(<span class="string">&quot;resources/ssl/cacert.pem&quot;</span>));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">window</span>.<span class="property">WebSocket</span> = <span class="title class_">MyWebSocket</span>;</span><br><span class="line"><span class="comment">/// other code </span></span><br><span class="line"><span class="comment">///...</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -655,11 +664,16 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="YiJiangFengYun">
-      <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Blog">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -734,11 +748,16 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="YiJiangFengYun">
-      <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Blog">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -830,11 +849,16 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="YiJiangFengYun">
-      <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Blog">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -873,7 +897,7 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>When Iphone turn on mute setting. game is mute.<br>We can keep game unmute by playing first sound loaded using audio DOM element when click first button.</p>
-<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Factory function</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createFirstDomAudio</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> enable = <span class="literal">true</span>;</span><br><span class="line">    enable = enable &amp;&amp; cc.sys.os === cc.sys.OS_IOS &amp;&amp; cc.sys.isBrowser;</span><br><span class="line">    <span class="keyword">var</span> audioFirst: HTMLAudioElement;</span><br><span class="line">    <span class="keyword">if</span> (enable) &#123;</span><br><span class="line">        <span class="keyword">const</span> url = <span class="string">&quot;...&quot;</span>;</span><br><span class="line">        audioFirst = <span class="keyword">new</span> Audio(url);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        enable,</span><br><span class="line">        audioFirst,</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//Instance object.</span></span><br><span class="line"><span class="keyword">const</span> firstDomAudio = createFirstDomAudio();</span><br><span class="line"></span><br><span class="line"><span class="comment">//Click event handler for first button.</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">onClick</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> ( ! firstDomAudio.enable) <span class="keyword">return</span>;</span><br><span class="line">    firstDomAudio.audioFirst.play();</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Factory function</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">createFirstDomAudio</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> enable = <span class="literal">true</span>;</span><br><span class="line">    enable = enable &amp;&amp; cc.<span class="property">sys</span>.<span class="property">os</span> === cc.<span class="property">sys</span>.<span class="property">OS_IOS</span> &amp;&amp; cc.<span class="property">sys</span>.<span class="property">isBrowser</span>;</span><br><span class="line">    <span class="keyword">var</span> <span class="attr">audioFirst</span>: <span class="title class_">HTMLAudioElement</span>;</span><br><span class="line">    <span class="keyword">if</span> (enable) &#123;</span><br><span class="line">        <span class="keyword">const</span> url = <span class="string">&quot;...&quot;</span>;</span><br><span class="line">        audioFirst = <span class="keyword">new</span> <span class="title class_">Audio</span>(url);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        enable,</span><br><span class="line">        audioFirst,</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//Instance object.</span></span><br><span class="line"><span class="keyword">const</span> firstDomAudio = <span class="title function_">createFirstDomAudio</span>();</span><br><span class="line"></span><br><span class="line"><span class="comment">//Click event handler for first button.</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">onClick</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> ( ! firstDomAudio.<span class="property">enable</span>) <span class="keyword">return</span>;</span><br><span class="line">    firstDomAudio.<span class="property">audioFirst</span>.<span class="title function_">play</span>();</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -905,11 +929,16 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="YiJiangFengYun">
-      <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Blog">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -926,13 +955,13 @@
 
       <time title="Created: 2021-01-28 09:00:00" itemprop="dateCreated datePublished" datetime="2021-01-28T09:00:00+00:00">2021-01-28</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-01-30 10:37:00" itemprop="dateModified" datetime="2021-01-30T10:37:00+00:00">2021-01-30</time>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
       </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2021-01-30 10:37:00" itemprop="dateModified" datetime="2021-01-30T10:37:00+00:00">2021-01-30</time>
+    </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -954,10 +983,10 @@
     
     <div class="post-body" itemprop="articleBody">
           <h2 id="Basics"><a href="#Basics" class="headerlink" title="Basics"></a>Basics</h2><p>First, the game should has some basic types. I use typescript language to describe these types.<br>The game has a root item types: money, cloth and clothes. Money is used to buy cloth and clothes.<br>Cloth is material of clothes. Clothes has durability and is worn by the user.</p>
-<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//ItemType is a top type of item.</span></span><br><span class="line"><span class="built_in">enum</span> ItemType &#123;</span><br><span class="line">    UNDEFINED,</span><br><span class="line">    MONEY,</span><br><span class="line">    CLOTH,</span><br><span class="line">    CLOTHES,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//Item is a base type of item</span></span><br><span class="line"><span class="keyword">interface</span> Item &#123;</span><br><span class="line">    id: <span class="built_in">string</span>, <span class="comment">//The property id of item should be unique to every item instances.</span></span><br><span class="line">    typeId: <span class="built_in">string</span>, <span class="comment">//The property typeId of item is string composed of all levels of the hierarchy of item type.</span></span><br><span class="line">    <span class="keyword">type</span>: ItemType, <span class="comment">// The property type of item indicate a item is money, cloth or clothes.</span></span><br><span class="line">    num: <span class="built_in">number</span>, <span class="comment">// The property num of item is a quantity of item.</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//User is the type of user</span></span><br><span class="line"><span class="keyword">interface</span> User &#123;</span><br><span class="line">    id: <span class="built_in">string</span>, <span class="comment">// A user owns a unique id too.</span></span><br><span class="line">    name: <span class="built_in">string</span>, <span class="comment">// A user has a name.</span></span><br><span class="line">    items: Item[], <span class="comment">// This is a array of items user owns.</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//This constant is a user object</span></span><br><span class="line"><span class="keyword">const</span> user: User = &#123;</span><br><span class="line">    id: ...,</span><br><span class="line">    name: ...,</span><br><span class="line">    items: [],</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//ItemType is a top type of item.</span></span><br><span class="line"><span class="keyword">enum</span> <span class="title class_">ItemType</span> &#123;</span><br><span class="line">    <span class="variable constant_">UNDEFINED</span>,</span><br><span class="line">    <span class="variable constant_">MONEY</span>,</span><br><span class="line">    <span class="variable constant_">CLOTH</span>,</span><br><span class="line">    <span class="variable constant_">CLOTHES</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//Item is a base type of item</span></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">Item</span> &#123;</span><br><span class="line">    <span class="attr">id</span>: <span class="built_in">string</span>, <span class="comment">//The property id of item should be unique to every item instances.</span></span><br><span class="line">    <span class="attr">typeId</span>: <span class="built_in">string</span>, <span class="comment">//The property typeId of item is string composed of all levels of the hierarchy of item type.</span></span><br><span class="line">    <span class="attr">type</span>: <span class="title class_">ItemType</span>, <span class="comment">// The property type of item indicate a item is money, cloth or clothes.</span></span><br><span class="line">    <span class="attr">num</span>: <span class="built_in">number</span>, <span class="comment">// The property num of item is a quantity of item.</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//User is the type of user</span></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">User</span> &#123;</span><br><span class="line">    <span class="attr">id</span>: <span class="built_in">string</span>, <span class="comment">// A user owns a unique id too.</span></span><br><span class="line">    <span class="attr">name</span>: <span class="built_in">string</span>, <span class="comment">// A user has a name.</span></span><br><span class="line">    <span class="attr">items</span>: <span class="title class_">Item</span>[], <span class="comment">// This is a array of items user owns.</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//This constant is a user object</span></span><br><span class="line"><span class="keyword">const</span> <span class="attr">user</span>: <span class="title class_">User</span> = &#123;</span><br><span class="line">    <span class="attr">id</span>: ...,</span><br><span class="line">    <span class="attr">name</span>: ...,</span><br><span class="line">    <span class="attr">items</span>: [],</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <h2 id="Money"><a href="#Money" class="headerlink" title="Money"></a>Money</h2><p>Money is a single instance, so it can be created directly in code.</p>
-<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> user: User = &#123;</span><br><span class="line"></span><br><span class="line">    ... </span><br><span class="line"></span><br><span class="line">    items: [ </span><br><span class="line">        &#123;</span><br><span class="line">            id: ...,</span><br><span class="line">            typeId: <span class="string">&quot;1&quot;</span>, <span class="comment">//Money has only one level type of 1.</span></span><br><span class="line">            <span class="keyword">type</span>: Item.MONEY,</span><br><span class="line">            num: ...,</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        ...</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="attr">user</span>: <span class="title class_">User</span> = &#123;</span><br><span class="line"></span><br><span class="line">    ... </span><br><span class="line"></span><br><span class="line">    <span class="attr">items</span>: [ </span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">id</span>: ...,</span><br><span class="line">            <span class="attr">typeId</span>: <span class="string">&quot;1&quot;</span>, <span class="comment">//Money has only one level type of 1.</span></span><br><span class="line">            <span class="attr">type</span>: <span class="title class_">Item</span>.<span class="property">MONEY</span>,</span><br><span class="line">            <span class="attr">num</span>: ...,</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        ...</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="Cloth"><a href="#Cloth" class="headerlink" title="Cloth"></a>Cloth</h2><p>There are many kind of cloth. Same kind of cloth has same properties and its value, so they can put into a single object.  </p>
 <p>Config:</p>
@@ -989,7 +1018,7 @@
 <td>Red Cloth</td>
 </tr>
 </tbody></table>
-<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="built_in">enum</span> ClothType &#123;</span><br><span class="line">    UNDEFINED,</span><br><span class="line">    WHITE,</span><br><span class="line">    BLACK,</span><br><span class="line">    RED,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">interface</span> ClothItem <span class="keyword">extends</span> Item &#123;</span><br><span class="line">    clothType: ClothType, </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> user: User = &#123;</span><br><span class="line"></span><br><span class="line">    ... </span><br><span class="line"></span><br><span class="line">    items: [</span><br><span class="line"></span><br><span class="line">        ...</span><br><span class="line"></span><br><span class="line">        &#123;</span><br><span class="line">            id: ...,</span><br><span class="line">            typeId: <span class="string">&quot;2-1&quot;</span>, <span class="comment">//Cloth has two level of types, they connect with &quot;ItemType-ClothType&quot;.</span></span><br><span class="line">            <span class="keyword">type</span>: ItemType.Cloth,</span><br><span class="line">            clothType: ClothType.WHITE,</span><br><span class="line">            num: ...,</span><br><span class="line">        &#125;,</span><br><span class="line"></span><br><span class="line">        &#123;</span><br><span class="line">            id: ...,</span><br><span class="line">            typeId: <span class="string">&quot;2-2&quot;</span>, <span class="comment">//Cloth has two level of types, they connect with &quot;ItemType-ClothType&quot;.</span></span><br><span class="line">            <span class="keyword">type</span>: ItemType.Cloth,</span><br><span class="line">            clothType: ClothType.BLACK,</span><br><span class="line">            num: ...,</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        ...</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">enum</span> <span class="title class_">ClothType</span> &#123;</span><br><span class="line">    <span class="variable constant_">UNDEFINED</span>,</span><br><span class="line">    <span class="variable constant_">WHITE</span>,</span><br><span class="line">    <span class="variable constant_">BLACK</span>,</span><br><span class="line">    <span class="variable constant_">RED</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">ClothItem</span> <span class="keyword">extends</span> <span class="title class_">Item</span> &#123;</span><br><span class="line">    <span class="attr">clothType</span>: <span class="title class_">ClothType</span>, </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="attr">user</span>: <span class="title class_">User</span> = &#123;</span><br><span class="line"></span><br><span class="line">    ... </span><br><span class="line"></span><br><span class="line">    <span class="attr">items</span>: [</span><br><span class="line"></span><br><span class="line">        ...</span><br><span class="line"></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">id</span>: ...,</span><br><span class="line">            <span class="attr">typeId</span>: <span class="string">&quot;2-1&quot;</span>, <span class="comment">//Cloth has two level of types, they connect with &quot;ItemType-ClothType&quot;.</span></span><br><span class="line">            <span class="attr">type</span>: <span class="title class_">ItemType</span>.<span class="property">Cloth</span>,</span><br><span class="line">            <span class="attr">clothType</span>: <span class="title class_">ClothType</span>.<span class="property">WHITE</span>,</span><br><span class="line">            <span class="attr">num</span>: ...,</span><br><span class="line">        &#125;,</span><br><span class="line"></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">id</span>: ...,</span><br><span class="line">            <span class="attr">typeId</span>: <span class="string">&quot;2-2&quot;</span>, <span class="comment">//Cloth has two level of types, they connect with &quot;ItemType-ClothType&quot;.</span></span><br><span class="line">            <span class="attr">type</span>: <span class="title class_">ItemType</span>.<span class="property">Cloth</span>,</span><br><span class="line">            <span class="attr">clothType</span>: <span class="title class_">ClothType</span>.<span class="property">BLACK</span>,</span><br><span class="line">            <span class="attr">num</span>: ...,</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        ...</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <h2 id="Clothes"><a href="#Clothes" class="headerlink" title="Clothes"></a>Clothes</h2><p>There are many kind of clothes. Same properties of same kind of clothes can own different value, so every instance of clothes should be a object alone.  </p>
 <p>Config:</p>
@@ -1018,7 +1047,7 @@
 <td>3</td>
 </tr>
 </tbody></table>
-<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="built_in">enum</span> ClothesType &#123;</span><br><span class="line">    UNDEFINED,</span><br><span class="line">    PURE_WHITE,</span><br><span class="line">    PINTO,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">interface</span> ClothesItem <span class="keyword">extends</span> Item &#123;</span><br><span class="line">    clothesType: ClothesType,</span><br><span class="line">    remainDay: <span class="built_in">number</span>, <span class="comment">//Remain time (uint: day)</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> user: User = &#123;</span><br><span class="line"></span><br><span class="line">    ... </span><br><span class="line"></span><br><span class="line">    items: [</span><br><span class="line"></span><br><span class="line">        ...</span><br><span class="line"></span><br><span class="line">        &#123;</span><br><span class="line">            id: ...,</span><br><span class="line">            typeId: <span class="string">&quot;3-1&quot;</span>, <span class="comment">//Clothes has two level of types, they connect with &quot;ItemType-ClothesType&quot;.</span></span><br><span class="line">            <span class="keyword">type</span>: ItemType.Clothes,</span><br><span class="line">            clothesType: ClothesType.PURE_WHITE,</span><br><span class="line">            num: <span class="number">1</span>, <span class="comment">//Clothes num is always one.</span></span><br><span class="line">            remainDay: ..., <span class="comment">//Different clothes has different ramain day</span></span><br><span class="line">        &#125;,</span><br><span class="line"></span><br><span class="line">        &#123;</span><br><span class="line">            id: ...,</span><br><span class="line">            typeId: <span class="string">&quot;3-2&quot;</span>, <span class="comment">//Clothes has two level of types, they connect with &quot;ItemType-ClothesType&quot;.</span></span><br><span class="line">            <span class="keyword">type</span>: ItemType.Clothes,</span><br><span class="line">            clothesType: ClothesType.PINTO,</span><br><span class="line">            num: <span class="number">1</span>, <span class="comment">//Clothes num is always one.</span></span><br><span class="line">            remainDay: ..., <span class="comment">//Different clothes has different ramain day</span></span><br><span class="line">        &#125;,</span><br><span class="line"></span><br><span class="line">        ...</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">enum</span> <span class="title class_">ClothesType</span> &#123;</span><br><span class="line">    <span class="variable constant_">UNDEFINED</span>,</span><br><span class="line">    <span class="variable constant_">PURE_WHITE</span>,</span><br><span class="line">    <span class="variable constant_">PINTO</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">ClothesItem</span> <span class="keyword">extends</span> <span class="title class_">Item</span> &#123;</span><br><span class="line">    <span class="attr">clothesType</span>: <span class="title class_">ClothesType</span>,</span><br><span class="line">    <span class="attr">remainDay</span>: <span class="built_in">number</span>, <span class="comment">//Remain time (uint: day)</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="attr">user</span>: <span class="title class_">User</span> = &#123;</span><br><span class="line"></span><br><span class="line">    ... </span><br><span class="line"></span><br><span class="line">    <span class="attr">items</span>: [</span><br><span class="line"></span><br><span class="line">        ...</span><br><span class="line"></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">id</span>: ...,</span><br><span class="line">            <span class="attr">typeId</span>: <span class="string">&quot;3-1&quot;</span>, <span class="comment">//Clothes has two level of types, they connect with &quot;ItemType-ClothesType&quot;.</span></span><br><span class="line">            <span class="attr">type</span>: <span class="title class_">ItemType</span>.<span class="property">Clothes</span>,</span><br><span class="line">            <span class="attr">clothesType</span>: <span class="title class_">ClothesType</span>.<span class="property">PURE_WHITE</span>,</span><br><span class="line">            <span class="attr">num</span>: <span class="number">1</span>, <span class="comment">//Clothes num is always one.</span></span><br><span class="line">            <span class="attr">remainDay</span>: ..., <span class="comment">//Different clothes has different ramain day</span></span><br><span class="line">        &#125;,</span><br><span class="line"></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">id</span>: ...,</span><br><span class="line">            <span class="attr">typeId</span>: <span class="string">&quot;3-2&quot;</span>, <span class="comment">//Clothes has two level of types, they connect with &quot;ItemType-ClothesType&quot;.</span></span><br><span class="line">            <span class="attr">type</span>: <span class="title class_">ItemType</span>.<span class="property">Clothes</span>,</span><br><span class="line">            <span class="attr">clothesType</span>: <span class="title class_">ClothesType</span>.<span class="property">PINTO</span>,</span><br><span class="line">            <span class="attr">num</span>: <span class="number">1</span>, <span class="comment">//Clothes num is always one.</span></span><br><span class="line">            <span class="attr">remainDay</span>: ..., <span class="comment">//Different clothes has different ramain day</span></span><br><span class="line">        &#125;,</span><br><span class="line"></span><br><span class="line">        ...</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <h2 id="Final"><a href="#Final" class="headerlink" title="Final"></a>Final</h2><p>If manager want to award items to a user, he can always fill a object data with special values of typeId and num properties.<br>For example, awarding a user 2 black cloth can be done through filling data object { typeId: “2-2”, num: 2 }, rather than data object { type: 2, clothType: 2, num: 2 }.</p>
 
@@ -1040,7 +1069,7 @@
 
 
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" title="Next page" aria-label="Next page" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 </div>
@@ -1065,7 +1094,24 @@
   </footer>
 
   
-  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
 <script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
 
   
