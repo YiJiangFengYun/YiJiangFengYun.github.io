@@ -1,12 +1,12 @@
 ---
-title: Nginx Proxy Socket.io 400 Bad Request
+title: Nginx Proxy Socket.IO 400 Bad Request
 date: 2021-08-02 16:00:00
 updated: 2021-08-02 16:00:00
 categories:
 - Nginx
 tags:
 - Nginx
-- Socket.io
+- Socket.IO
 - Proxy
 ---
 
