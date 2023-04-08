@@ -127,18 +127,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">30</span>
+          <span class="site-state-item-count">31</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-count">17</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">27</span>
+        <span class="site-state-item-count">30</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -168,6 +168,94 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/08/mongodb-log_all_operations/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="YiJiangFengYun">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/04/08/mongodb-log_all_operations/" class="post-title-link" itemprop="url">MongoDB logging all operations</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2023-04-08 09:00:00" itemprop="dateCreated datePublished" datetime="2023-04-08T09:00:00+00:00">2023-04-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/MongoDB/" itemprop="url" rel="index"><span itemprop="name">MongoDB</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="You-can-log-all-operations"><a href="#You-can-log-all-operations" class="headerlink" title="You can log all operations"></a>You can log all operations</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$ mongo</span><br><span class="line">MongoDB shell version: 2.4.9</span><br><span class="line">connecting to: <span class="built_in">test</span></span><br><span class="line">&gt; use myDb</span><br><span class="line">switched to db myDb</span><br><span class="line">&gt; db.getProfilingLevel()</span><br><span class="line">0</span><br><span class="line">&gt; db.setProfilingLevel(2)</span><br><span class="line">&#123; <span class="string">&quot;was&quot;</span> : 0, <span class="string">&quot;slowms&quot;</span> : 1, <span class="string">&quot;ok&quot;</span> : 1 &#125;</span><br><span class="line">&gt; db.getProfilingLevel()</span><br><span class="line">2</span><br><span class="line">&gt; db.system.profile.find( &#123; millis : &#123; <span class="variable">$gte</span>: 1 &#125;, appName : &#123; <span class="variable">$exists</span> : <span class="literal">false</span> &#125;, ns : &#123; <span class="variable">$not</span> : /system.profile/ &#125; &#125; ).sort( &#123; ts : -1 &#125; )</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><a target="_blank" rel="noopener" href="http://docs.mongodb.org/manual/reference/method/db.setProfilingLevel/">Source: http://docs.mongodb.org/manual/reference/method/db.setProfilingLevel/</a><br>db.setProfilingLevel(2) means “log all operations”.</p>
+<h2 id="How-to-drop-the-collection-system-profile"><a href="#How-to-drop-the-collection-system-profile" class="headerlink" title="How to drop the collection system.profile"></a>How to drop the collection system.profile</h2><ul>
+<li>Firstly, turn off the profiling by setting its level to 0.</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.setProfilingLevel(0)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Then you can simply drop the collection.</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.system.profile.drop()</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Now you are free to go and start it all over.</li>
+</ul>
+<h2 id="How-to-list-operations-meets-the-criteria"><a href="#How-to-list-operations-meets-the-criteria" class="headerlink" title="How to list operations meets the criteria"></a>How to list operations meets the criteria</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//查询指令记录。</span></span><br><span class="line"><span class="comment">//过滤条件：1.需耗时（millis字段)多少毫秒以上，2.appName字段不存在（可能指令来自某APP，如Studio 3T), 3.ns字符串中不包含system.profile（排除指令是system.profile相关的）。</span></span><br><span class="line"><span class="comment">//排序：按时间排序。</span></span><br><span class="line">db.system.profile.find( &#123; <span class="attr">millis</span> : &#123; <span class="attr">$gte</span>: <span class="number">1</span> &#125;, <span class="attr">appName</span> : &#123; <span class="attr">$exists</span> : <span class="literal">false</span> &#125;, <span class="attr">ns</span> : &#123; <span class="attr">$not</span> : <span class="regexp">/system.profile/</span> &#125; &#125; ).sort( &#123; <span class="attr">ts</span> : -<span class="number">1</span> &#125; )</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -951,86 +1039,8 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/01/26/javascript-memory-management/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="YiJiangFengYun">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/01/26/javascript-memory-management/" class="post-title-link" itemprop="url">Memory management in V8 Engine</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-01-26 11:45:00" itemprop="dateCreated datePublished" datetime="2021-01-26T11:45:00+00:00">2021-01-26</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Javascript/" itemprop="url" rel="index"><span itemprop="name">Javascript</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <ul>
-<li><p><a target="_blank" rel="noopener" href="https://dev.to/deepu105/visualizing-memory-management-in-v8-engine-javascript-nodejs-deno-webassembly-105p">Visualizing memory management in V8 Engine (JavaScript, NodeJS, Deno, WebAssembly)</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://v8.dev/blog/trash-talk">Trash talk: the Orinoco garbage collector</a></p>
-</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 </div>
@@ -1042,7 +1052,7 @@
 
 <div class="copyright">
   &copy; 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2023</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
