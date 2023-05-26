@@ -47,3 +47,7 @@ tags:
 ## 某科学的超电磁炮
 
 [![某科学的超电磁炮](https://cdn.aqdstatic.com:966/age/20090012.jpg '某科学的超电磁炮')](https://www.agemys.vip/detail/20090012)
+
+## 只有我不在的街道
+
+[![只有我不在的街道](https://cdn.aqdstatic.com:966/age/20160121.jpg '只有我不在的街道')](https://www.agemys.vip/detail/20160121)
