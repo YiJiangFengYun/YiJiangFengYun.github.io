@@ -9,6 +9,10 @@ tags:
 - Drama Series
 ---
 
+## 葬送的芙莉莲
+
+[![葬送的芙莉莲](https://cdn.aqdstatic.com:966/age/20230207.jpg '葬送的芙莉莲')](https://www.agedm.org/detail/20230207)
+
 ## 天国大魔境
 
 [![天国大魔境](https://cdn.aqdstatic.com:966/age/20230072.jpg '天国大魔境')](https://www.agemys.vip/detail/20230072)
