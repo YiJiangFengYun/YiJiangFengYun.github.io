@@ -59,3 +59,5 @@ tags:
 ## 命运石之门
 
 [![命运石之门](https://cdn.aqdstatic.com:966/age/20110006.jpg '命运石之门')](https://www.agedm.org/detail/20110006)
+
+[![命运石之门0](https://cdn.aqdstatic.com:966/age/20180112.jpg '命运石之门0')](https://www.agedm.org/detail/20180112)
