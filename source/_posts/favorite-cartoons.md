@@ -55,3 +55,7 @@ tags:
 ## 只有我不在的街道
 
 [![只有我不在的街道](https://cdn.aqdstatic.com:966/age/20160121.jpg '只有我不在的街道')](https://www.agemys.vip/detail/20160121)
+
+## 命运石之门
+
+[![命运石之门](https://cdn.aqdstatic.com:966/age/20110006.jpg '命运石之门')](https://www.agedm.org/detail/20110006)
